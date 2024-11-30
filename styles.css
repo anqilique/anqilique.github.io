@@ -2,7 +2,7 @@
     --background: #1f2335;
     --white: #c0caf5;
     --highlight: #ff007c;
-    --grad_green: linear-gradient(#7dcfff, #7aa2f7);
+    --gradient: linear-gradient(#7dcfff, #7aa2f7);
 }
 
 html {
@@ -38,7 +38,7 @@ a {
 
 .gradient-text {
     background-color: var(--white);
-    background-image: var(--grad_green);
+    background-image: var(--white);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,7 +59,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: none;
-    border: 0.1rem solid var(--highlight);
+    border: 0.1rem solid var(--white);
     border-radius: 1rem;
     color: var(--white);
     padding: 0.8rem;
@@ -75,8 +75,8 @@ a {
 }
 
 .link-button:hover {
-    background-color: var(--highlight);
-    border: 0.125rem solid var(--highlight);
+    background-color: var(--white);
+    border: 0.125rem solid var(--white);
     color: var(--background);
     transform: scale(1.02, 1.02);
     font-weight: bold;
