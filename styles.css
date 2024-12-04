@@ -78,6 +78,6 @@ a {
     background-color: var(--white);
     border: 0.125rem solid var(--white);
     color: var(--background);
-    transform: scale(1.02, 1.02);
+    transform: scale(1.01, 1.01);
     font-weight: bold;
 }
