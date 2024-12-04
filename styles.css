@@ -32,17 +32,13 @@ a {
 }
 
 button {
-    font-family: Source Code Pro, sans-serif;
+    font-family: Source Code Pro, Courier, monospace;
     color: var(--background);
     background-color: var(--background);
     border: none;
     cursor: pointer;
     outline: none;
     -webkit-tap-highlight-color: transparent;
-}
-
-button:active {
-    background-color: var(--background);
 }
 
 .footer {
