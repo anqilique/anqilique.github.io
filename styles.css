@@ -82,6 +82,8 @@ button {
     max-width: 37.5rem;
     min-width: 12.5rem;
     box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .link-button:hover {
