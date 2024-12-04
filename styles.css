@@ -1,8 +1,8 @@
 :root {
-    --background: #0d0f17;
-    --white: #c0caf5;
-    --highlight: #ff007c;
-    --gradient: linear-gradient(#7dcfff, #7aa2f7);
+    --background: #14131e;
+    --white: #bfbfbf;
+    --highlight: #0f9ad2;
+    --gradient: linear-gradient( #59a6b8, #0f9ad2, #107fae, #3b6678);
 }
 
 html {
@@ -31,14 +31,14 @@ a {
     text-decoration: none;
 }
 
-.attribution {
+.footer {
     font-size: 0.8rem;
-    color: var(--white)
+    color: var(--highlight)
 }
 
 .gradient-text {
-    background-color: var(--white);
-    background-image: var(--white);
+    background-color: var(--gradient);
+    background-image: var(--gradient);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,7 +59,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: none;
-    border: 0.1rem solid var(--white);
+    border: 0.1rem solid var(--highlight);
     border-radius: 1rem;
     color: var(--white);
     padding: 0.8rem;
@@ -75,8 +75,8 @@ a {
 }
 
 .link-button:hover {
-    background-color: var(--white);
-    border: 0.125rem solid var(--white);
+    background-color: var(--highlight);
+    border: 0.125rem solid var(--highlight);
     color: var(--background);
     transform: scale(1.01, 1.01);
     font-weight: bold;
