@@ -12,9 +12,42 @@ const textOptions = [
     "Shh... The broken stuff is a ✨feature✨."
 ];
 
+const kaomojis = [
+    "(＾▽＾)",
+    "(^_^)/",
+    "(^_^)",
+    "(•‿•)",
+    "(｡♥‿♥｡)",
+    "(◕‿◕)",
+    "(*≧▽≦)",
+    "(^o^)/",
+    "（＾ｖ＾）",
+    "(・o・)",
+    "(O_O)",
+    "(°o°)",
+    "(@_@)",
+    "(・_・ヾ)",
+    "(♥‿♥)",
+    "(*´ω｀*)",
+    "(❤ω❤)",
+    "( ˘ ³˘)♥",
+    "(づ￣ ³￣)づ",
+    "ʕ•ᴥ•ʔ",
+    "(^・ω・^ )",
+    "(=^･ω･^=)",
+    "（￣～￣;）"
+];
+
 function replaceText() {
     const randomIndex = Math.floor(Math.random() * textOptions.length);
     document.getElementById("random-text").textContent = textOptions[randomIndex];
 }
 
+function changeKao() {
+	const randomNumber = Math.floor(Math.random() * kaomojis.length);
+	const randomKaomoji = kaomojis[randomNumber];
+	document.getElementById("kaomoji").innerText = randomKaomoji;
+}
+
 document.addEventListener("DOMContentLoaded", replaceText);
+document.addEventListener("DOMContentLoaded", changeKao);

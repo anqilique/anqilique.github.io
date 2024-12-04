@@ -31,8 +31,17 @@ a {
     text-decoration: none;
 }
 
+button {
+    font-family: Source Code Pro, sans-serif;
+    color: var(--background);
+    background-color: var(--background);
+    border: none;
+    cursor: pointer;
+}
+
+
 .footer {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--highlight)
 }
 
