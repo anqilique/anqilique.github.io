@@ -1,6 +1,6 @@
 :root {
-    --background: #14131e;
-    --white: #bfbfbf;
+    --background: #0d0d14;
+    --white: #d6d6d6;
     --highlight: #0f9ad2;
     --gradient: linear-gradient( #59a6b8, #0f9ad2, #107fae, #3b6678);
 }
@@ -43,12 +43,12 @@ button {
 
 .footer {
     font-size: 1rem;
-    color: var(--highlight)
+    color: var(--white)
 }
 
 .gradient-text {
-    background-color: var(--gradient);
-    background-image: var(--gradient);
+    background-color: var(--white);
+    background-image: var(--white);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,7 +69,7 @@ button {
     align-items: center;
     justify-content: center;
     background-color: none;
-    border: 0.1rem solid var(--highlight);
+    border: 0.1rem solid var(--white);
     border-radius: 1rem;
     color: var(--white);
     padding: 0.8rem;
@@ -87,8 +87,8 @@ button {
 }
 
 .link-button:hover {
-    background-color: var(--highlight);
-    border: 0.125rem solid var(--highlight);
+    background-color: var(--white);
+    border: 0.125rem solid var(--white);
     color: var(--background);
     font-weight: bold;
 }
