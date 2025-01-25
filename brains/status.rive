@@ -1,0 +1,8 @@
++ status
+- Searching for Anqilique's Focus Session...
+^ <call>open_focus</call> 
+
+> object open_focus javascript
+    window.open("https://www.focumon.com/focus_with/anqilique", "_blank");
+    return "<br>Focumon has been opened in a new tab!"
+< object

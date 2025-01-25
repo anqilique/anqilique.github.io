@@ -1,67 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="hideScroll">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Anqilique</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./assets/leek.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-    <h1 class="gradient-text">Anqilique</h1>
-    <p id="random-text">Looking for something?</p>
-
-    <br>
-
-    <h2 class="gradient-text">Focus With Me</h2>
-
-    <div class="links-container">
-        <a href="https://www.focumon.com/focus_with/anqilique" class="link-button" target="_blank">Focumon</a>
+<body onload="botLoaded()">
+    <div class="chat hideScroll glass">
+        <div class="messages"></div>
+        <div id="latest"></div>
     </div>
 
-    <br>
+    <form class="actions">
+        <input class="glass" type="text" placeholder="Type something (or 'help') and press ENTER...!">
+    </form>
 
-    <h2 class="gradient-text">Contact Me</h2>
+    <footer>
+        &copy;
+        <script>document.write(new Date().getFullYear())</script>
 
-    <div class="links-container">
+        Anqilique 🥬
 
-        <a href="https://instagram.com/anqilique" class="link-button" target="_blank">Instagram</a>
-    </div>
+    </footer>
 
-    <br>
-
-    <h2 class="gradient-text">Code Things</h2>
-
-    <div class="links-container">
-
-        <a href="https://github.com/anqilique" class="link-button" target="_blank">Github</a>
-
-
-        <a href="https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326" class="link-button"
-            target="_blank">CodinGame</a>
-
-    </div>
-
-    <br>
-
-
-    <h2 class="gradient-text">Projects</h2>
-
-    <div class="links-container">
-
-        <a href="https://anqilique.github.io/To-Do-App/" class="link-button" target="_blank">To-Do App</a>
-       
-        <a href="https://github.com/anqilique/anqilique.github.io" class="link-button" target="_blank">This Site's Source Code</a>
-
-    </div>
-
-    <br>
-    <button onclick="changeKao();">
-        <p class="footer">That's all for now! <span id="kaomoji">(＾▽＾)</span></p>
-    </button>
-
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

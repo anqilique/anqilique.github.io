@@ -1,0 +1,47 @@
++ links
+- You can find <span class="green">Anqilique</span> on these platforms!
+^ <br><br>- <a href="https://www.focumon.com/focus_with/anqilique" target="_blank">Focumon</a>
+^ <br><br>- <a href="https://instagram.com/anqilique" target="_blank">Instagram</a>
+^ <br><br>- <a href="https://github.com/anqilique" target="_blank">GitHub</a>
+^ <br><br>- <a href="https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326" target="_blank">CodinGame</a>
+^ <br><br><br> You can type the command <span class="lightgreen">'open link_name'</span> to open them!
+^ \s E.g. <span class="lightgreen">'open focumon'</span>, <span class="lightgreen">'open github'</span>
+
++ open *
+- <call>open <star></call>
+
++ open
+- Open what exactly? E.g. <span class="lightgreen">'open GitHub'
+
++ (focumon|instagram|github|codingame)
+- Anqilique uses that! Use <span class="lightgreen">'open platform_name'</span> and I'll find their profile for you.
+^ \s You can also use the <span class="lightgreen">'links'</span> command.
+
+> object open javascript
+    var link_name = args.join(" ");
+    var url = "I don't have a link for that. 🤔"
+
+    switch(link_name) {
+        case "focumon":
+            url = "https://www.focumon.com/focus_with/anqilique";
+            break;
+        case "instagram":
+            url = "https://instagram.com/anqilique";
+            break;
+        case "github":
+            url = "https://github.com/anqilique";
+            break;
+        case "codingame":
+            url = "https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326";
+            break;
+    }
+
+    if (url.includes("https://")) {
+        window.open(url, "_blank");
+        return "I've opened this in a new tab!"
+    } else {
+        return url
+    }
+
+< object
+

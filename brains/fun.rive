@@ -1,0 +1,73 @@
++ fun
+- Fun Command List <br>
+^ <span class="lightgreen"> fish / annoying / google something / gpt something</span>
+
++ (fish|fishing)
+- You didn't catch anything! {weight=40}
+- You reeled in a soggy cardboard box (JUNK)! 📦 {weight=8}
+- You reeled in a half-eaten boot (JUNK)! 🥾 {weight=8}
+- You reeled in a rusting tin can (JUNK)! 🥫 {weight=8}
+- You reeled in a broken CD (JUNK)! 💿 {weight=8}
+- You reeled in a salmon (COMMON)! 🐟  {weight=6}
+- You reeled in a halibut (COMMON)! 🐟 {weight=6}
+- You reeled in a catfish (COMMON)! 🐟 {weight=6}
+- You reeled in a flounder (COMMON)! 🐟 {weight=6}
+- You reeled in a trumpetfish (RARE)! 🐟 {weight=3}
+- You reeled in a fangtooth (RARE)! 🐟 {weight=3}
+- You reeled in a anglerfish (RARE)! 🐟 {weight=3}
+- You reeled in a sunscale stingray (EPIC)! 🐟 {weight=2}
+- You reeled in a moonlit cisco (EPIC)! 🐟 {weight=2}
+- You reeled in a sea dragon (LEGENDARY)! 🐲 {weight=1}
+
++ (rickroll|rick|roll|rollrick|rr|annoying|annoy|annoy me)
+- <i>Rick Astley</i>
+^ <br><br>
+^ 🎵 We’re no strangers to love <audio name="media" controls="" autoplay id="rickroll"><source src="/assets/rr.mp3" type="audio/mpeg"></audio><br>
+^ You know the rules and so do I <br>
+^ A full commitment’s what I’m thinking of <br>
+^ You wouldn’t get this from any other guy 🎵 <br>
+^ <br><br>
+^ 🎵 I just wanna tell you how I’m feeling <br>
+^ Gotta make you understand 🎵 <br>
+^ <br><br>
+^ <i>go away</i>
+^ <br><br>
+^ 🎵 Never gonna give you up <br>
+^ Never gonna let you down <br>
+^ Never gonna run around and desert you <br>
+^ Never gonna make you cry <br>
+^ Never gonna say goodbye <br>
+^ Never gonna tell a lie and hurt you 🎵 <br>
+^ <br><br>
+^ <i>is</i>
+^ <br><br>
+^ 🎵 We’ve known each other for so long <br>
+^ Your heart’s been aching but you’re too shy to say it <br>
+^ Inside we both know what’s been going on <br>
+^ We know the game and we’re gonna play it 🎵 <br>
+^ <br><br>
+^ 🎵 And if you ask me how I’m feeling <br>
+^ Don’t tell me you’re too blind to see 🎵 <br>
+^ <br><br>
+^ <i>the passphrase</i>
+^ <br><br>
+^ 🎵 Never gonna give you up <br>
+^ Never gonna let you down <br>
+^ Never gonna run around and desert you <br>
+^ Never gonna make you cry <br>
+^ Never gonna say goodbye <br>
+^ Never gonna tell a lie and hurt you 🎵
+
++ (go away rick astley|rick astley go away)
+- <call>end_rickroll</call> 
+
+> object end_rickroll javascript
+    if (document.getElementById("rickroll") != null) {
+        const audio = document.getElementById("rickroll");
+        audio.remove();
+
+        return "One rickroll terminated. Lucky you... 👁👄👁"
+    } else {
+        return "I don't know what you're talking about... 🤨🙄"
+    }
+< object

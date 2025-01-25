@@ -1,0 +1,13 @@
++ (about|about anqi|about anqilique)
+- About <span class="green">Anqilique</span>: 👩‍💻
+^ <br><br> - <span class="green">Anqilique</span> is the creator of this website.
+^ <br><br> - A university student studying computer science.
+^ <br><br> - Likes cats, autumn, dark mode, and chocolate.
+^ <br><br> - ISTJ (Logistician)
+^ <br><br><br> Still curious? Try <span class="lightgreen">'about leekbot'</span>.
+
++ about (leekbot|bot|leek)
+- About <span class="green">LeekBot</span>: 🥬
+^ <br><br> - Created with HTML, CSS, JavaScript, and RiveScript.
+^ <br><br> - Using this handy <a target="_blank" href="https://medium.com/@awesammcoder/javascript-tutorial-simple-chatai-using-rivescript-js-4f0291e298f1">tutorial </a>
+^ by Awesamm Coder.

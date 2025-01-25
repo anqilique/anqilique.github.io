@@ -1,0 +1,25 @@
++ google *
+- I've Googled "<star>" for you...! 👉 <call>google <star></call>
+
++ google
+- Google what exactly? 🤔
+
+> object google javascript
+	var query = "http://www.google.com/search?q=" + encodeURIComponent(args.join(" "));
+	window.open(query);
+
+	return "<a href=\"" + query + "\" target=\"_blank\">Link Here!</a>";
+< object
+
++ gpt *
+- I've GPT'd "<star>" for you...! 👉 <call>gpt <star></call>
+
++ gpt
+- GPT what exactly? 🤔
+
+> object gpt javascript
+	var query = "https://letmegpt.com/?q=" + encodeURIComponent(args.join(" "));
+	window.open(query);
+	
+	return "<a href=\"" + query + "\" target=\"_blank\">Link Here!</a>";
+< object

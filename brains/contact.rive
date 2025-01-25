@@ -1,0 +1,22 @@
++ contact
+- <span class="green">Anqilique</span> has a contact form <a href="https://forms.gle/TeTLvJW7xTMvmg5Y6" target="_blank">here</a>.
+^ \s Alternatively, use the command <span class="lightgreen">'contact form'</span> to fill in a response from here.
+
++ contact form
+- <iframe id="contact_form" src="https://docs.google.com/forms/d/e/1FAIpQLSfUEspg8BzcVBFTT7cpMm5B_6c5mf9dwrs1mX95xhXLCyYQwA/viewform?embedded=true">Loading…</iframe>
+^ <br><br> The form should be loading. Scroll up to view!
+^ <br><br> Use <span class="lightgreen">'close form'</span> once you are done to clear it.
+
++ (close form|close contact form)
+- <call>close_form</call> 
+
+> object close_form javascript
+    if (document.getElementById("contact_form") != null) {
+        const form = document.getElementById("contact_form");
+        form.remove();
+
+        return "The contact form has been closed."
+    } else {
+        return "There is no contact form loaded."
+    }
+< object

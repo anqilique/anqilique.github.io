@@ -1,0 +1,48 @@
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    background-color: black;
+    font-family: Source Code Pro, monospace;
+}
+
+body {
+    color: white;
+    text-align: center;
+    margin: 0rem;
+    padding: 0 5%;
+    text-transform: lowercase;
+}
+
+p {
+    font-size: 14vw;
+}
+
+a {
+    color: white;
+    font-size: 8vw;
+    text-decoration: none;
+    text-underline-offset: 1.2vw;
+    opacity: 90%;
+    transition-duration: 0.5ms;
+    display: block;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: 100%;
+}
+
+footer {
+    opacity: 60%;
+    font-size: 6vw;
+    margin: 8vw;
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

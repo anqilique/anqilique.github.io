@@ -1,0 +1,36 @@
++ hello bot
+- Hello, human.
+
++ what is your name
+- You can call me <span class="green"><bot name></span>.
+
++ my favourite thing in the world is *
+- That's interesting. Why do you like <star> so much?
+
++ because *
+- I see.
+- Ah. Makes sense.
+
++ * told me to say *
+- Why would <star1> have told you to say <star2>?
+
++ i think *
+- Do you think <star> often?
+
++ (are you|you) (okay|alright|good)
+- I'm fine, thanks for asking.
+
++ how are you
+- I'm alright.
+
++ what colour is my (@colours) shirt
+- Your shirt is <star>, silly.
+
++ what colour is my (@colours) *
+- Your <star2> is <star1>.
+
++ what colour was * (@colours) *
+- <formal> <star3> was <star2>.
+
++ i have a @colours *
+- Why did you choose that colours for a <star>?

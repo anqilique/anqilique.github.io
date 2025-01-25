@@ -1,0 +1,60 @@
++ help
+- Command List
+^ <br><br><span class="lightgreen"> help / about / contact / links / status / fun</span>
+^ <br><br> Try <span class="lightgreen">'help [command]'</span> to learn more about a specific command.
+^ <br><br> E.g. <span class="lightgreen">'help about'</span>, <span class="lightgreen">'about help'</span>
+
++ (help about|about help)
+- The <span class="lightgreen">'about'</span> command displays information about <span class="green">Anqilique</span>.
+^ <br><br> Alternatives include: <br><span class="lightgreen">'about anqi'</span> / <span class="lightgreen">'about anqilique'</span>
+^ <br><br> Information about <span class="green">LeekBot</span> can be viewed with: 
+^ <br><span class="lightgreen">'about leekbot'</span> / <span class="lightgreen">'about leek'</span> / <span class="lightgreen">'about bot'</span>
+
++ (help contact|contact help)
+- The <span class="lightgreen">'contact'</span> command displays contact information for <span class="green">Anqilique</span>.
+^ \s Using <span class="lightgreen">'contact form'</span> opens up <span class="green">Anqilique</span>'s Google Form here.
+^ \s And, <span class="lightgreen">'close form'</span> or <span class="lightgreen">'close contact form'</span> removes it from the screen.
+
++ (help links|links help)
+- The <span class="lightgreen">'links'</span> command displays a list of links to other platforms <span class="green">Anqilique</span> uses, such as GitHub.
+^ \s Links can be opened with <span class="lightgreen">'open link_name'</span>.
+^ <br><br> E.g. <span class="lightgreen">'open GitHub'</span>.
+
++ (help status|status help)
+- The <span class="lightgreen">'status'</span> command displays a link to <span class="green">Anqilique</span>'s current focus session on Focumon, a gamified productivity site.
+
++ (help fun|fun help)
+- The <span class="lightgreen">'fun'</span> command displays extra commands for small minigames and miscellaneous features of <span class="green">LeekBot</span>.
+^ <br><br> Under this category is:
+^ <br> - <span class="lightgreen">'fish'</span>, go fishing
+^ <br> - <span class="lightgreen">'annoying'</span>, exactly what it claims to be
+^ <br> - <span class="lightgreen">'google something'</span>, google anything
+^ <br> - <span class="lightgreen">'gpt something'</span>, ask gpt anything
+
++ (help clear|clear help)
+- The <span class="lightgreen">'clear'</span> command resets the chat and clears previous messages.
+
++ help help
+- Uh, isn't this kinda self-explanatory? 😂
+
++ clear
+- <call>clear_chat</call> 
+
+> object clear_chat javascript
+    if (document.querySelector('.messages').innerHTML != null) {
+        const message_container = document.querySelector('.messages');
+        message_container.innerHTML = ``;
+
+        botReply(greeting)
+
+        return "The chat has been reset."
+    } else {
+        return "There is no content to clear."
+    }
+< object
+
++ *
+- Sorry, I don't understand! 😢
+- Could you rephrase that? 😕
+- What do you mean? 🤔
+- Is that a valid command? 😵

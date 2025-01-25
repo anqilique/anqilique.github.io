@@ -1,94 +1,161 @@
 :root {
-    --background: #0d0d14;
-    --white: #d6d6d6;
-    --highlight: #0f9ad2;
-    --gradient: linear-gradient( #59a6b8, #0f9ad2, #107fae, #3b6678);
+    --orange: #EF9C66;
+    --yellow: #FCDC94;
+    --white: #FBFBFB;
+    --green: #78ABA8;
+    --lightgreen: #C8CFA0;
+}
+
+
+* {
+    font-family: "Source Code Pro", monospace;
+    font-size: 12pt;
 }
 
 html {
     overflow-y: scroll;
-  
-    -webkit-scrollbar-display: none;  /* Chrome */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  
     scroll-behavior: smooth;
-  
-  }
-
-body {
-    font-family: Source Code Pro, "Courier New", monospace;
-    text-align: center;
-    background-color: var(--background);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55)), url("/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
 }
 
-p {
-    color: var(--white);
+body {
+    margin: 0 auto;
+    max-width: 90%;
+    padding: 0 8rem;
 }
 
 a {
-    color: inherit;
+    color: var(--orange);
     text-decoration: none;
+    font-size: 1.2rem;
+    transition-duration: 0.1s;
 }
 
-button {
-    font-family: Source Code Pro, "Courier New", monospace;
-    color: var(--background);
-    background-color: var(--background);
-    border: none;
-    cursor: pointer;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+a:hover {
+    color: var(--yellow);
 }
 
-.footer {
-    font-size: 1rem;
-    color: var(--white)
-}
-
-.gradient-text {
-    background-color: var(--white);
-    background-image: var(--white);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.links-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.625rem;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.link-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: none;
-    border: 0.1rem solid var(--white);
-    border-radius: 1rem;
-    color: var(--white);
-    padding: 0.8rem;
+footer {
     text-align: center;
-    font-family: Source Code Pro, "Courier New", monospace;
-    font-size: 1.25rem;
-    margin: 0.25rem;
-    width: 100%;
-    transition: 0.25s;
-    max-width: 37.5rem;
-    min-width: 12.5rem;
-    box-sizing: border-box;
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+    color: var(--green);
+    opacity: 80%;
+    font-size: 0.9rem;
+    transition-duration: 0.5s;
 }
 
-.link-button:hover {
-    background-color: var(--white);
-    border: 0.125rem solid var(--white);
-    color: var(--background);
-    font-weight: bold;
+footer:hover {
+    opacity: 100%;
+    color: var(--lightgreen)
+}
+
+audio {
+    display: none;
+}
+
+span {
+    font-size: inherit;
+}
+
+sub {
+    opacity: 70%;
+}
+
+#contact_form {
+    margin-left: -2rem;
+    width: 640px;
+    height: 1380px;
+    border: none;
+}
+
+.glass {
+    background: rgba(24, 24, 26, 0.644);
+    border-radius: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 1px solid rgba(37, 37, 40, 0.37);
+}
+
+.green {
+    color: var(--green);
+}
+.orange {
+    color: var(--orange);
+}
+
+.yellow {
+    color: var(--yellow);
+}
+
+.white {
+    color: var(--white);
+}
+
+.lightgreen {
+    color: var(--lightgreen);
+}
+
+.chat {
+    padding: 0.6rem;
+    margin: 0.6rem 0;
+    overflow-y: scroll;
+    border-radius: 0.5rem;
+    height: 80%;
+    max-height: 80%;
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.actions {
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    max-width: auto;
+    box-sizing: border-box;
+}
+
+.actions input {
+    height: 100%;
+    max-height: 5%;
+    width: 100%;
+    display: block;
+    outline: 0;
+    color: var(--white);
+    padding-left: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.messages div {
+    font-size: 1.2rem;
+    width: fit-content;
+    max-width: 80%;
+    display: block;
+    margin: 0.2rem;
+    padding: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.messages .bot {
+    text-align: left;
+    margin-right: auto;
+    color: var(--white);
+}
+
+.messages .self {
+    text-align: right;
+    margin-left: auto;
+    color: var(--green);
 }
