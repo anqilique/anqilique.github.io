@@ -62,7 +62,7 @@ function selfReply(message) {
 function botLoaded() {
 
     if (window.innerWidth < 1000) {
-        window.location.replace("http://127.0.0.1:5500/links.html");
+        window.location.replace("./links.html");
     } else {
         bot.loadFile(brains).then(botReady).catch(botNotReady);
     }
