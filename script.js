@@ -42,6 +42,13 @@ form.addEventListener('submit', (event) => {
 
 
 botReply(loading_brains_msg);
+window.addEventListener('resize', checkResize);
+
+function checkResize() {
+    if (window.innerWidth < 1000) {
+        window.location.replace("./links.html");
+    }
+}
 
 function botReply(message) {
     message_container.innerHTML += `<div class="bot">${message}</div>`;
@@ -59,8 +66,8 @@ function selfReply(message) {
     });
 }
 
-function botLoaded() {
 
+function botLoaded() {
     if (window.innerWidth < 1000) {
         window.location.replace("./links.html");
     } else {
