@@ -32,14 +32,14 @@
 
         botReply(greeting);
 
-        return "The chat has been reset.";
+        return "The page has been reset.";
     } else {
         return "There is no content to clear.";
     }
 < object
 
 + *
-- Sorry, I dont understand! 😢
+- Sorry, I don't understand! 😢
 - Could you rephrase that? 😕
 - What do you mean? 🤔
 - Is that a valid command? 😵
