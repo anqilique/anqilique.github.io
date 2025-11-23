@@ -1,37 +1,68 @@
 :root {
-    --orange: #EF9C66;
-    --yellow: #FCDC94;
-    --white: #FBFBFB;
-    --green: #78ABA8;
-    --lightgreen: #C8CFA0;
+    --black: #0e0e1d;
+    --white: #fbf8ee;
+    --grey: #bbbbbb;
+    --silver: #7f85a4;
+    --red: #df5f75;
+    --orange:#df795f;
+    --yellow: #d3c277;
+    --green: #6a9955;
+    --blue: #71c5df;
+
+    --radius: 0;
+    --max-font-size: 1.2rem;
+    --font-size: 1.2rem;
+    --line-height: 1.54em;
+
+    --background: var(--black);
+    --foreground: var(--white);
+    --accent: var(--blue);
 }
 
-
-* {
-    font-family: "Source Code Pro", monospace;
-    font-size: 12pt;
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    background-color: black;
+    background-color: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
+
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
     max-width: 90%;
-    padding: 0 8rem;
+    font-family:
+        "Fira Code",
+        "JetBrains Mono",
+        Monaco,
+        Consolas,
+        "Ubuntu Mono",
+        monospace;
+    font-size: var(--font-size);
+    font-weight: 400;
+    line-height: var(--line-height);
+    background-color: var(--background);
+    color: var(--foreground);
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: contextual;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
 }
 
 a {
-    color: var(--orange);
+    color: var(--red);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: var(--font-size);
     transition-duration: 0.1s;
 }
 
@@ -39,83 +70,36 @@ a:hover {
     color: var(--yellow);
 }
 
-footer {
-    text-align: center;
-    color: var(--green);
-    opacity: 80%;
-    font-size: 0.9rem;
-    transition-duration: 0.5s;
-}
-
-footer:hover {
-    opacity: 100%;
-    color: var(--lightgreen)
-}
-
 audio {
     display: none;
 }
 
-span {
-    font-size: inherit;
+.title {
+    font-size: 2.4rem;
+    color: var(--accent);
 }
 
-sub {
-    opacity: 70%;
-}
-
-#contact_form {
-    margin-left: -2rem;
-    width: 640px;
-    height: 1380px;
-    border: none;
+.heading {
+    font-size: 1.8rem;
+    color: var(--accent);
 }
 
 .content {
-    padding-top: 2rem;
+    padding-top: 1rem;
 }
 
-.glow {
-    -webkit-box-shadow:0px 0px 15px 5px rgba(0,255,136,0.2) !important;
-    -moz-box-shadow: 0px 0px 15px 5px rgba(0,255,136,0.2) !important;
-    box-shadow: 0px 0px 15px 5px rgba(0,255,136,0.2) !important;
-}
-
-.glass {
-    background: rgba(24, 24, 26, 0.644);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.5px);
-    -webkit-backdrop-filter: blur(4.5px);
-    border: 1px solid rgba(37, 37, 40, 0.37);
-}
-
-.green {
-    color: var(--green);
-}
-.orange {
-    color: var(--orange);
-}
-
-.yellow {
-    color: var(--yellow);
-}
-
-.white {
-    color: var(--white);
-}
-
-.lightgreen {
-    color: var(--lightgreen);
+.sub {
+    font-size: 1rem;
+    color: var(--silver);
+    opacity: 70%;
 }
 
 .chat {
-    padding: 0.6rem;
-    margin-bottom: 2rem;
+    width: 98vw;
+    max-width: 98vw;
     overflow-y: scroll;
-    border-radius: 0.5rem;
-    height: 70%;
-    max-height: 70%;
+    height: 100%;
+    max-height: 90%;
 }
 
 .hideScroll::-webkit-scrollbar {
@@ -123,49 +107,53 @@ sub {
 }
 
 .hideScroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .actions {
     position: relative;
     bottom: 0;
     display: block;
-    width: 100%;
-    max-width: auto;
+    width: 98vw;
+    max-width: 98vw;
     box-sizing: border-box;
+    margin-left: 0.8rem;
 }
 
 .actions input {
     height: 100%;
     max-height: 5%;
-    width: 100%;
+    width: 98vw;
+    max-width: 98vw;
     display: block;
-    outline: 0;
-    color: var(--white);
-    padding-left: 1.5rem;
-    border-radius: 0.5rem;
+    background: none;
+    outline: none;
+    border: none;
+    color: var(--accent);
+    margin-left: 0.1rem;
+    font-family: inherit;
+    font-size: var(--font-size);
 }
 
 .messages div {
-    font-size: 1.2rem;
+    font-size: var(--font-size);
     width: fit-content;
-    max-width: 80%;
+    max-width: 90%;
     display: block;
     margin: 0.2rem;
     padding: 0.8rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
 }
 
 .messages .bot {
-    text-align: left;
-    margin-right: auto;
-    color: var(--white);
+    color: var(--foreground);
 }
 
 .messages .self {
-    text-align: right;
-    margin-left: auto;
-    color: var(--green);
+    color: var(--silver);
 }

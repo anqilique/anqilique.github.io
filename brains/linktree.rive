@@ -1,25 +1,37 @@
 + links
-- You can find <span class="green">Anqilique</span> on these platforms!
-^ <br><br>- <a href="https://www.focumon.com/focus_with/anqilique" target="_blank">Focumon</a>
-^ <br><br>- <a href="https://instagram.com/anqilique" target="_blank">Instagram</a>
-^ <br><br>- <a href="https://github.com/anqilique" target="_blank">GitHub</a>
-^ <br><br>- <a href="https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326" target="_blank">CodinGame</a>
-^ <br><br><br> You can type the command <span class="lightgreen">'open link_name'</span> to open them!
-^ \s E.g. <span class="lightgreen">'open focumon'</span>, <span class="lightgreen">'open github'</span>
+- <span class="heading">Links 🔗</span>
+^ <br><br> You can find Anqilique on these platforms!
+^
+^ <br><br>- <a href="https://www.focumon.com/focus_with/anqilique" target="_blank">Focumon</a>\s
+^ <span style="color: var(--silver)"> --> Gamified focus timer and productivity app.</span>
+^
+^ <br><br>- <a href="https://github.com/anqilique" target="_blank">GitHub</a>\s
+^ <span style="color: var(--silver)"> --> My projects and code repositories.</span>
+^
+^ <br><br>- <a href="https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326" target="_blank">CodinGame</a>\s
+^ <span style="color: var(--silver)"> --> Coding games and programming challenges.</span>
+^
+^ <br><br>- <a href="https://anqilique.itch.io/" target="_blank">Itch.io</a>\s
+^ <span style="color: var(--silver)"> --> Indie games and creative projects.</span>
+^
+^ <br><br>- <a href="https://instagram.com/anqilique" target="_blank">Instagram</a>\s
+^ <span style="color: var(--silver)"> --> Private account for now...</span>
+^
+^ <br><br> You can type the command <span style="color: var(--blue)">open link_name</span> to open them!
+^ \s E.g. <span style="color: var(--blue)">open itchio</span>, <span style="color: var(--blue)">open github</span>
 
 + open *
 - <call>open <star></call>
 
 + open
-- Open what exactly? E.g. <span class="lightgreen">'open GitHub'
+- Open what exactly? E.g. <span style="color: var(--blue)">open itchio</span>
 
-+ (focumon|instagram|github|codingame)
-- Anqilique uses that! Use <span class="lightgreen">'open platform_name'</span> and I'll find their profile for you.
-^ \s You can also use the <span class="lightgreen">'links'</span> command.
++ (focumon|instagram|github|codingame|itchio)
+- <call>open <star></call>
 
 > object open javascript
     var link_name = args.join(" ");
-    var url = "I don't have a link for that. 🤔"
+    var url = "There isn't a link for that here. 🤔"
 
     switch(link_name) {
         case "focumon":
@@ -34,13 +46,16 @@
         case "codingame":
             url = "https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326";
             break;
+        case "itchio":
+            url = "https://anqilique.itch.io/";
+            break;
     }
 
     if (url.includes("https://")) {
         window.open(url, "_blank");
-        return "I've opened this in a new tab!"
+        return link_name + " has been opened in a new tab! 🚀";
     } else {
-        return url
+        return url;
     }
 
 < object

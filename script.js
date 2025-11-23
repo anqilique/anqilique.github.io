@@ -9,30 +9,28 @@ const brains = [
     "./brains/help.rive",
     "./brains/search.rive",
     "./brains/about.rive",
-    "./brains/contact.rive",
     "./brains/linktree.rive",  // Because 'links' is a reserved word in RiveScript
     "./brains/status.rive",
-    "./brains/fun.rive",
+    // "./brains/fun.rive", --> Disabled for now.
     "./brains/convo.rive",
 ];
 
-const greeting = `Hi there! I am <span class="green">LeekBot</span>. 🥬
+const greeting = `<span class="title">anqilique.github.io</span>
+
 <br><br>
-I've been created by <span class="green">Anqilique</span> to answer your questions. <br> I can fetch links, 
-search the web, and more! 😁
 
-<br><br><br>
+<span style="font-style: italic; color: var(--silver)">Welcome to anqilique's personal website. Take a look around?</span>
+
+<br><br>
 Try typing in one of the following:<br>
-<span class="lightgreen">help / about / contact / links / status / fun / clear</span>
+<span style="color: var(--red);">help / about / links / status / clear</span>
 `
 
-const no_brains_msg = `Uh oh! LeekBot's brains not found. 😱🧠
-<br>Please let Anqilique know or come back later!
-`
+const loading_brains_msg = `<span class="sub">Attempting to load page content...</span>`
 
-const loading_brains_msg = "<sub>Loading brains... 🧠 <br><br>If nothing appears, please let Anqilique know or come back later! 😱</sub>"
+const brains_loaded_msg = `<span class="sub">Page loaded successfully! <br><br>---</span>`
 
-const brains_loaded_msg = "<sub>Brains loaded! 🧠 <br><br>---</sub>"
+const brains_fail_msg = `<span class="sub">Failed to load. Check back later!<br><br>---</span>`
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -85,4 +83,5 @@ function botReady() {
 
 function botNotReady(err) {
     console.log(no_brains_msg, err);
+    botReply(brains_fail_msg);
 }
