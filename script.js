@@ -23,7 +23,7 @@ const greeting = `<span class="title">anqilique.github.io</span>
 
 <br><br>
 Try typing in one of the following:<br>
-<span style="color: var(--red);">about / links / status / clear / help </span>
+<span style="color: var(--red);">about / links / status / more / clear / help </span>
 `
 
 const loading_brains_msg = `<span class="sub">Attempting to load page content...</span>`

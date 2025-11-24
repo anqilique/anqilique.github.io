@@ -26,7 +26,7 @@
 + open
 - Open what exactly? E.g. <span style="color: var(--blue)">open itchio</span>
 
-+ (focumon|instagram|github|codingame|itchio)
++ (focumon|instagram|github|codingame|itchio|repo)
 - <call>open <star></call>
 
 > object open javascript
@@ -48,6 +48,9 @@
             break;
         case "itchio":
             url = "https://anqilique.itch.io/";
+            break;
+        case "repo":
+            url = "https://github.com/anqilique/anqilique.github.io";
             break;
     }
 
