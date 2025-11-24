@@ -7,6 +7,7 @@ Terminal-style personal website. Uses RiveScript, which isn't really recognised 
 - [ ] Background music track and sound effects.
 - [ ] Minigames and hidden easter eggs.
 - [ ] Quick links on page load.
+- [ ] Unlockable themes.
 
 ## Preview
 <img width="1920" height="910" alt="image" src="https://github.com/user-attachments/assets/66984c51-7b63-465f-969a-8e789963b7d1" />
