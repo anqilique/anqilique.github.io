@@ -1,6 +1,6 @@
 # anqilique.github.io
 
-Terminal-style personal website.
+Terminal-style personal website. Uses RiveScript, which isn't really recognised on GitHub.
 
 ### Ideas
 - [ ] Exp. points and levelling as a reward for exploring.
