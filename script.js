@@ -5,25 +5,25 @@ const form = document.querySelector('form');
 const input_box = document.querySelector('input');
 
 const brains = [
-    "./brains/dictionary.rive",
+    // "./brains/dictionary.rive",
     "./brains/help.rive",
     "./brains/search.rive",
     "./brains/about.rive",
     "./brains/linktree.rive",  // Because 'links' is a reserved word in RiveScript
     "./brains/status.rive",
     // "./brains/fun.rive", --> Disabled for now.
-    "./brains/convo.rive",
+    // "./brains/convo.rive",
 ];
 
 const greeting = `<span class="title">anqilique.github.io</span>
 
 <br><br>
 
-<span style="font-style: italic; color: var(--silver)">Welcome to anqilique's personal website. Take a look around?</span>
+<span style="font-style: italic; color: var(--silver)">Welcome to Anqilique's personal website. Take a look around?</span>
 
 <br><br>
 Try typing in one of the following:<br>
-<span style="color: var(--red);">help / about / links / status / clear</span>
+<span style="color: var(--red);">about / links / status / clear / help </span>
 `
 
 const loading_brains_msg = `<span class="sub">Attempting to load page content...</span>`
@@ -56,7 +56,7 @@ function botReply(message) {
 }
 
 function selfReply(message) {
-    message_container.innerHTML += `<div class="self">${message}</div>`;
+    message_container.innerHTML += `<div class="self">> ${message}</div>`;
     location.href = '#latest';
 
     bot.reply("local-user", message).then(function (reply) {

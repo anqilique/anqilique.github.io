@@ -1,6 +1,6 @@
 + help
 - <span class="heading">Command List 💬</span>
-^ <br><br><span style="color: var(--red);">help / about / links / status / clear</span>
+^ <br><br><span style="color: var(--red);">about / links / status / clear / help</span>
 ^ <br><br> Try <span style="color: var(--blue);">help [command]</span> to learn more about a specific command.
 ^ <br><br> E.g. <span style="color: var(--blue);">help about</span>, <span style="color: var(--blue);">about help</span>
 
@@ -9,12 +9,12 @@
 ^ <br><br> Alternatives include: <br><span style="color: var(--blue);">about anqi</span> / <span style="color: var(--blue);">about anqilique</span>
 
 + (help links|links help)
-- The <span style="color: var(--blue);">links</span> command displays a list of links to other platforms Anqilique uses, such as GitHub.
-^ \s Links can be opened with <span style="color: var(--blue);">open link_name</span>.
-^ <br><br> E.g. <span style="color: var(--blue);">open GitHub</span>.
+- The <span style="color: var(--blue);">links</span> command displays a list of links to other platforms Anqilique uses.
+^ <br> Links can be opened with <span style="color: var(--blue);">open link_name</span>.
+^ \s E.g. <span style="color: var(--blue);">open GitHub</span>.
 
 + (help status|status help)
-- The <span style="color: var(--blue);">status</span> command displays a link to Anqilique's current focus session on Focumon, a gamified productivity site.
+- The <span style="color: var(--blue);">status</span> command displays a link to Anqilique's current focus session on Focumon.
 
 + (help clear|clear help)
 - The <span style="color: var(--blue);">clear</span> command resets the chat and clears previous messages.

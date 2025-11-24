@@ -1,5 +1,5 @@
 // Bot Variables
-! var name     = LeekBot
+! var name     = None
 
 // Substitutions
 ! sub chatgpt   = gpt
