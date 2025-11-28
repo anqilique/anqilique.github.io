@@ -47,7 +47,7 @@
     }
 
     else {
-        return "You can't do that right now."
+        return "You can't do that right now, or invalid command."
     }
 
 < object
