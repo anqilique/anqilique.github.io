@@ -10,13 +10,15 @@
 
 <body onload="botLoaded()">
     <div class="content">
+        <audio name="media" controls loop autoplay id="backgroundMusic"><source src="/assets/LazyMoodOneul.mp3" type="audio/mpeg"></audio>
+
         <div class="chat hideScroll">
             <div class="messages"></div>
             <div id="latest"></div>
         </div>
 
         <form class="actions">
-            <input class="glass" type="text" placeholder="> Enter command. E.g. 'help'">
+            <input type="text" placeholder="> Enter command. E.g. 'help'">
         </form>
     </div>
 

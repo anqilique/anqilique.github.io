@@ -10,7 +10,7 @@ const brains = [
     "./brains/search.rive",
     "./brains/about.rive",
     "./brains/linktree.rive",  // Because 'links' is a reserved word in RiveScript
-    "./brains/status.rive",
+    "./brains/more.rive",
     // "./brains/fun.rive", --> Disabled for now.
     // "./brains/convo.rive",
 ];
@@ -23,7 +23,7 @@ const greeting = `<span class="title">anqilique.github.io</span>
 
 <br><br>
 Try typing in one of the following:<br>
-<span style="color: var(--red);">about / links / status / more / clear / help </span>
+<span style="color: var(--red);">about / links / more / clear / help </span>
 `
 
 const loading_brains_msg = `<span class="sub">Attempting to load page content...</span>`
@@ -32,15 +32,27 @@ const brains_loaded_msg = `<span class="sub">Page loaded successfully! <br><br>-
 
 const brains_fail_msg = `<span class="sub">Failed to load. Check back later!<br><br>---</span>`
 
+
+// Handle form submission
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     selfReply(input_box.value);
     input_box.value = '';
 });
 
+// Disable audio by default
+if (typeof(Storage) !== "undefined") {
+    localStorage.audio_enabled = false;
+} else {
+    // No web storage support.
+}
 
+// Load the bot
 botReply(loading_brains_msg);
 window.addEventListener('resize', checkResize);
+
+
+/* Functions */
 
 function checkResize() {
     if (window.innerWidth < 1000) {
@@ -63,7 +75,6 @@ function selfReply(message) {
         botReply(reply);
     });
 }
-
 
 function botLoaded() {
     if (window.innerWidth < 1000) {

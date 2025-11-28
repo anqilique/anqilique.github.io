@@ -1,0 +1,53 @@
++ more
+- <span class="heading">More Commands 💬</span>
+^ <br><br><span style="color: var(--red);"> repo </span><span style="color: var(--silver)">--> View the source code repository.</span>
+^ <br><span style="color: var(--red);"> music </span><span style="color: var(--silver)">--> Control the background music.</span>
+^ <br><span style="color: var(--red);"> status </span><span style="color: var(--silver)">--> View Anqilique's current focus session on Focumon.</span>
+
++ music
+- <span class="heading">Music Commands 🎵</span>
+^ <br><br><span style="color: var(--red);"> music </span><span style="color: var(--silver)">--> Show this music commands list.</span>
+^ <br><br> You can enter additional keywords after <span style="color: var(--blue)">music</span> to control the background music.
+^ <br><span style="color: var(--red);">play / pause / stop </span><span style="color: var(--silver)">--></span>\s
+^ E.g. <span style="color: var(--blue)">music play</span>, <span style="color: var(--blue)">music pause</span>, <span style="color: var(--blue)">music stop</span>
+
++ music *
+- <call>music <star></call>
+
++ status
+- Searching for Anqilique's Focus Session...
+^ <call>status</call> 
+
+> object status javascript
+    window.open("https://www.focumon.com/focus_with/anqilique", "_blank");
+    return "<br>Focumon has been opened in a new tab!"
+< object
+
+> object music javascript
+    var command = args.join(" ");
+    const audioPlayer = document.getElementById('backgroundMusic');
+
+    if (localStorage.audio_enabled === 'true' && (command === 'stop')) {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0;
+
+        localStorage.audio_enabled = 'false';
+        return "Background music stopped.";
+
+    } else if (localStorage.audio_enabled === 'true' && command === 'pause') {
+        localStorage.audio_enabled = 'false';
+        audioPlayer.pause();
+
+        return "Background music paused.";
+
+    } else if (localStorage.audio_enabled === 'false' && (command === 'play')) {
+        audioPlayer.play();
+        localStorage.audio_enabled = 'true';
+        return "Playing <span style='color: var(--blue)'>Lazy Mood</span> by <a href='https://youtu.be/dcGyio8Y480?list=PLXKw2MMKa2p3h-WEImeAX2cCHZ5kByYiC&t=105' target='_blank'>Oneul 🎵</a> <span style='color: var(--silver)'> <-- Click to support the artist! </span>";
+    }
+
+    else {
+        return "You can't do that right now."
+    }
+
+< object

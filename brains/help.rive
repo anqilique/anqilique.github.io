@@ -1,6 +1,6 @@
 + help
 - <span class="heading">Command List 💬</span>
-^ <br><br><span style="color: var(--red);">about / links / status / more / clear / help</span>
+^ <br><br><span style="color: var(--red);">about / links / more / clear / help</span>
 ^ <br><br> Try <span style="color: var(--blue);">help [command]</span> to learn more about a specific command.
 ^ <br><br> E.g. <span style="color: var(--blue);">help about</span>, <span style="color: var(--blue);">about help</span>
 
@@ -13,9 +13,6 @@
 ^ <br> Links can be opened with <span style="color: var(--blue);">open link_name</span>.
 ^ \s E.g. <span style="color: var(--blue);">open GitHub</span>.
 
-+ (help status|status help)
-- The <span style="color: var(--blue);">status</span> command displays a link to Anqilique's current focus session on Focumon.
-
 + (help clear|clear help)
 - The <span style="color: var(--blue);">clear</span> command resets the chat and clears previous messages.
 
@@ -27,10 +24,6 @@
 
 + clear
 - <call>clear_chat</call>
-
-+ more
-- <span class="heading">More Commands 💬</span>
-^ <br><br><span style="color: var(--red);"> repo <span style="color: var(--silver)">--> View the source code repository.</span>
 
 > object clear_chat javascript
     const message_container = document.querySelector('.messages');
