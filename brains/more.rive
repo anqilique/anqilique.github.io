@@ -43,7 +43,7 @@
     } else if (localStorage.audio_enabled === 'false' && (command === 'play')) {
         audioPlayer.play();
         localStorage.audio_enabled = 'true';
-        return "Playing <span style='color: var(--blue)'>Lazy Mood</span> by <a href='https://youtu.be/dcGyio8Y480?list=PLXKw2MMKa2p3h-WEImeAX2cCHZ5kByYiC&t=105' target='_blank'>Oneul 🎵</a> <span style='color: var(--silver)'> <-- Click to support the artist! </span>";
+        return "Playing <span style='color: var(--blue)'>eggs on toast</span> by <a href='https://youtu.be/WwpMT6b9Rys?list=PLjmaGYAtBvtexABXfqNfI0RaGc8kD0z3c' target='_blank'>a bowl of rice 🎵</a> <span style='color: var(--silver)'> <-- Click to support the artist! </span>";
     }
 
     else {
