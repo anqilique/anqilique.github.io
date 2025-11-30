@@ -1,8 +1,22 @@
 let bot = new RiveScript();
+let xpPoints = 0;
 
 const message_container = document.querySelector('.messages');
 const form = document.querySelector('form');
 const input_box = document.querySelector('input');
+
+const xpCounter = document.querySelector('#xpPoints');
+const xpKey = 1;  // XP per keypress
+const xpMsg = 5;  // XP per message
+
+const xpTitles = {
+    0: "🌱 Newcomer",
+    100: "🌿 Wanderer",
+    200: "🌲 Explorer",
+    300: "🗻 Adventurer",
+    400: "🌄 Navigator",
+    500: "🌟 Legend"
+};
 
 const brains = [
     // "./brains/dictionary.rive",
@@ -36,23 +50,67 @@ const brains_fail_msg = `<span class="sub">Failed to load. Check back later!<br>
 // Handle form submission
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    selfReply(input_box.value);
-    input_box.value = '';
+    if (input_box.value.trim() !== '') {
+        selfReply(input_box.value);
+        incrementXP(xpMsg);
+
+        input_box.value = '';
+    }
+});
+
+// Increment XP on keypress (excluding Enter)
+window.addEventListener('keypress', (event) => {
+    if (event.key !== 'Enter') {
+        incrementXP(xpKey);
+    }
 });
 
 // Disable audio by default
-if (typeof(Storage) !== "undefined") {
+if (typeof (Storage) !== "undefined") {
     localStorage.audio_enabled = false;
 } else {
     // No web storage support.
 }
+
+// Load saved XP/title from localStorage
+function loadXPFromStorage() {
+    if (typeof (Storage) === "undefined") return;
+
+    const storedPoints = parseInt(localStorage.getItem('xpPoints'));
+    const storedTitle = localStorage.getItem('xpTitle');
+
+    if (!isNaN(storedPoints)) {
+        xpPoints = storedPoints;
+        if (xpCounter) xpCounter.textContent = xpPoints;
+    }
+
+    const titleElement = document.querySelector('.xp-title');
+    if (titleElement) {
+        // Prefer stored title, otherwise derive from xp
+        const titleToShow = storedTitle || getTitleByXP(xpPoints);
+        titleElement.textContent = titleToShow;
+    }
+}
+
+function saveXPToStorage(title) {
+    if (typeof (Storage) === "undefined") return;
+    try {
+        localStorage.setItem('xpPoints', String(xpPoints));
+        if (typeof title === 'string') localStorage.setItem('xpTitle', title);
+    } catch (e) {
+        console.warn('Unable to save XP to storage:', e);
+    }
+}
+
+// Immediately restore previously saved values (if any)
+loadXPFromStorage();
 
 // Load the bot
 botReply(loading_brains_msg);
 window.addEventListener('resize', checkResize);
 
 
-/* Functions */
+/* Bot Functions */
 
 function checkResize() {
     if (window.innerWidth < 1000) {
@@ -93,6 +151,48 @@ function botReady() {
 }
 
 function botNotReady(err) {
-    console.log(no_brains_msg, err);
+    console.log("Failed to load brains:", err);
     botReply(brains_fail_msg);
+}
+
+
+/* XP Functions */
+
+function incrementXP(amount) {
+    xpPoints += amount;
+    if (xpCounter) xpCounter.textContent = xpPoints;
+
+    const newTitle = getTitleByXP(xpPoints);
+    updateTitle(newTitle);
+    // Persist updated points (title saved inside updateTitle when it changes)
+    saveXPToStorage();
+}
+
+function getTitleByXP(xp) {
+    let currentTitle = "";
+    for (let milestone in xpTitles) {
+        if (xp >= milestone) {
+            currentTitle = xpTitles[milestone];
+        }
+    }
+    return currentTitle;
+}
+
+function updateTitle(title) {
+    const titleElement = document.querySelector('.xp-title');
+    if (!titleElement) return;
+
+    if (titleElement.textContent !== title) {
+        titleElement.textContent = title;
+        botReply(lvlUpMessage(title));
+        saveXPToStorage(title);
+    }
+}
+
+function lvlUpMessage(title) {
+    let title_text = `<span style="color: var(--red)">You've achieved the title:</span> <span style="color: var(--yellow)">${title}</span>`;
+    let xp_text = `<span style="color: var(--red)">You now have</span> <span style="color: var(--yellow)">${xpPoints} XP</span>`;
+    let flavour = `<span class="sub" style="color: var(--silver)">Keep exploring to unlock more titles!</span><br><br>`;
+
+    return `<span class="heading"><br>Level Up! ✨<br></span><br>${title_text}<br>${xp_text}<br><br>${flavour}`;
 }

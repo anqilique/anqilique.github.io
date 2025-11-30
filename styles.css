@@ -4,7 +4,7 @@
     --grey: #bbbbbb;
     --silver: #7f85a4;
     --red: #df5f75;
-    --orange:#df795f;
+    --orange: #df795f;
     --yellow: #d3c277;
     --green: #6a9955;
     --blue: #71c5df;
@@ -156,4 +156,35 @@ audio {
 
 .messages .self {
     color: var(--silver);
+}
+
+.xp-counter {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    color: var(--accent);
+    background-color: rgba(14, 14, 29, 0.8);
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--accent);
+    z-index: 100;
+    opacity: 75%;
+    transition-duration: 0.5s;
+}
+
+.xp-counter:hover {
+    opacity: 100%;
+}
+
+#xpPoints {
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+.xp-title {
+    font-size: 0.9rem;
+    color: var(--orange);
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    text-align: right;
 }

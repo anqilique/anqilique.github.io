@@ -10,7 +10,14 @@
 
 <body onload="botLoaded()">
     <div class="content">
-        <audio name="media" controls loop id="backgroundMusic"><source src="/assets/ABowlOfRice_EggsOnToastLoop.wav" type="audio/mpeg"></audio>
+        <div class="xp-counter">
+            <div class="xp-title">🌱 Newcomer</div>
+            <span id="xpPoints">0</span> XP Points
+        </div>
+
+        <audio name="media" controls loop id="backgroundMusic">
+            <source src="/assets/ABowlOfRice_EggsOnToastLoop.wav" type="audio/mpeg">
+        </audio>
 
         <div class="chat hideScroll">
             <div class="messages"></div>

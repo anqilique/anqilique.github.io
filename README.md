@@ -4,6 +4,8 @@ Terminal-style personal website. Uses RiveScript, which isn't really recognised 
 
 ### Ideas
 - [ ] Exp. points and levelling as a reward for exploring.
+  - [x] XP points added, saved in browser.
+  - [x] Basic titles added, subject to change.
 - [ ] Background music track and sound effects.
   - [x] One BG track, with basic music commands.
 - [ ] Minigames and hidden easter eggs.
