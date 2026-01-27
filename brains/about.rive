@@ -1,8 +1,16 @@
 + (about|about anqi|about anqilique)
-- <span class="heading">About Anqilique 👩‍💻</span>
-^ <br><br> - Anqilique is the creator of this website.
-^ <br> - A university student studying computer science.
-^ <br> - And likely in need of more sleep.
+- <span class="heading">About 👩‍💻</span>
+^ <br><br> Hi, I'm Anqilique!<br>
+^ <br> I'm a university student majoring in <span style="color: var(--blue)">Computer Science</span>.
+^ <br> When I'm not studying, I like to build fun, visually-appealing things.
+^ <br><span class="sub">(I'm hoping this website meets the criteria...)</span>
+^ <br><br>
+^ I also dabble in the following...
+^ <span style="color: var(--silver)">
+^ <br>- Game Development 🎮
+^ <br>- Photography 📸
+^ <br>- Pixel Art 🎨
+^ </span>
 ^ <br><br>
 ^ This website was created using HTML, CSS, JavaScript, and RiveScript.
 ^ <br>Make something similar with this handy <a target="_blank" href="https://medium.com/@awesammcoder/javascript-tutorial-simple-chatai-using-rivescript-js-4f0291e298f1">tutorial </a>
