@@ -1,0 +1,55 @@
+:root {
+    --base: #091319FF;
+    --neutral: #9fb9d0FF;
+    --secondary: #94a0a9FF;
+    --accent: #b387faFF;
+    --outline: #1b262cFF;
+}
+
+* {
+    font-family: monospace;
+    background-color: var(--base);
+    color: var(--neutral);
+}
+
+body {
+    font-size: 1rem;
+}
+
+p {
+    margin: 1.8rem 0;
+}
+
+.content {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2.4rem 5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title {
+    color: var(--accent);
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: var(--accent);
+}
+
+hr {
+    border: none;
+    border-top: dotted 0.4rem var(--outline);
+    margin: 2.8rem 0;
+}
