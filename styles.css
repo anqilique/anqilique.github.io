@@ -29,15 +29,44 @@ p {
 .header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .title {
     color: var(--accent);
 }
 
+.work {
+    margin-top: -1rem;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+}
+
+.project-title {
+    color: var(--accent);
+}
+
+.project-detail {
+    color: var(--secondary);
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    margin: 0.8rem 0;
+}
+
 h1 {
     font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--accent);
 }
 
 a {
@@ -51,5 +80,5 @@ a:hover, a:focus {
 hr {
     border: none;
     border-top: dotted 0.4rem var(--outline);
-    margin: 2.8rem 0;
+    margin: 2.4rem 0;
 }
