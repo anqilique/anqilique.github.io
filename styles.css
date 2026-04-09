@@ -22,6 +22,8 @@ body {
 
 p {
     margin: 1.8rem 0;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 h1 {
@@ -34,12 +36,12 @@ h2 {
 }
 
 a {
+    color: var(--accent);
     text-decoration: none;
     opacity: 0.9;
 }
 
 a:hover, a:focus {
-    color: var(--accent);
     opacity: 1;
 }
 
@@ -63,6 +65,14 @@ hr {
     background-color: var(--base);
     margin: 0 0 0.6rem 0;
     z-index: 99;
+}
+
+.header a {
+    color: var(--neutral);
+}
+
+.header a:hover, .header a:focus {
+    color: var(--accent);
 }
 
 .title {
