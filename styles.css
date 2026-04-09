@@ -88,6 +88,8 @@ hr {
     display: flex;
     justify-content: space-between;
     margin-top: 2.4rem;
+    flex-wrap: wrap;
+    position: sticky;
 }
 
 .project-title {
@@ -108,6 +110,8 @@ hr {
 .link {
     display: flex;
     margin: 1.4rem 0;
+    flex-wrap: wrap;
+    position: sticky;
 }
 
 .link a {
