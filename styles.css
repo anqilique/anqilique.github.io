@@ -119,8 +119,13 @@ hr {
 }
 
 .footer {
-    color: var(--secondary);
     font-style: italic;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: var(--secondary)
 }
 
 .about, .work, .contact {
