@@ -11,7 +11,8 @@ _Clean and simple personal website._
 - [ ] Actual responsive design
 - [ ] Ability to toggle/select different themes
 - [ ] Scroll progress bar (just because it's fancy)
-- [ ] Some kind of gamification ✨
+- [ ] Random flavour text (because fun)
+- [ ] Some kind of gamification (✨)
 
 ## Website Preview
 <img width="1903" height="926" alt="image" src="https://github.com/user-attachments/assets/7f19d6a9-9360-4b5f-8b1c-11426d5aaa3b" />
