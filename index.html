@@ -216,5 +216,15 @@
             </div>
 
         </div>
+
+        <script>
+            window.addEventListener('resize', checkResize);
+            function checkResize() {
+                if (window.innerWidth < 1000) {
+                    globalThis.location.replace("./links.html");
+                }
+            }
+        </script>
+
     </body>
 </html>

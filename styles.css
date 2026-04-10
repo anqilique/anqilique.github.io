@@ -131,3 +131,49 @@ hr {
 .about, .work, .contact {
     scroll-margin-top: 5.2rem;
 }
+
+.links-content {
+    text-align: center;
+    align-content: center;
+}
+
+.links-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.links-header {
+    margin-top: 2.4rem;
+}
+
+.links-title {
+    color: var(--accent);
+    font-size: 1.8rem;
+}
+
+.links-content p {
+    text-align: center;
+}
+
+.button {
+    background-color: var(--base);
+    border: 0.2rem solid var(--accent);
+    border-radius: 1.2rem;
+    padding: 1.2rem 4.8rem;
+    width: 32%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition-duration: 0.4s;
+    margin: 0.8rem 0;
+}
+
+.button:hover {
+    background-color: var(--accent);
+    color: var(--base);
+    transition-duration: 0.4s;
+}
