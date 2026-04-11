@@ -1,9 +1,10 @@
 :root {
-    --base: #091319FF;
+    --base: #181818;
     --neutral: #9fb9d0FF;
-    --secondary: #94a0a9FF;
-    --accent: #b387faFF;
-    --outline: #1b262cFF;
+    --secondary: #7c909a;
+    --accent: #0291d5;
+    --highlight: #dbae5a;
+    --outline: #23282e;
 }
 
 html {
@@ -39,10 +40,12 @@ a {
     color: var(--accent);
     text-decoration: none;
     opacity: 0.9;
+    transition: 0.2s;
 }
 
 a:hover, a:focus {
     opacity: 1;
+    color: var(--highlight);
 }
 
 hr {
@@ -70,6 +73,7 @@ hr {
 
 .header a {
     color: var(--neutral);
+    transition: 0.2s;
 }
 
 .header a:hover, .header a:focus {
@@ -116,6 +120,11 @@ hr {
 
 .link a {
     color: var(--accent);
+    transition: 0.2s;
+}
+
+.link a:hover {
+    color: var(--highlight)
 }
 
 .footer {

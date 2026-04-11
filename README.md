@@ -16,4 +16,4 @@ _Clean and simple personal website._
 - [ ] Some kind of gamification (✨)
 
 ## Website Preview
-<img width="1903" height="926" alt="image" src="https://github.com/user-attachments/assets/7f19d6a9-9360-4b5f-8b1c-11426d5aaa3b" />
+<img width="1903" height="926" alt="image" src="media/personal_website.png" />
