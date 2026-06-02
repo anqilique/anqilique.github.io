@@ -1,10 +1,10 @@
 :root {
-    --base: #181818;
-    --neutral: #9fb9d0FF;
-    --secondary: #7c909a;
-    --accent: #0291d5;
-    --highlight: #dbae5a;
-    --outline: #23282e;
+  --base: #181818;
+  --neutral: rgb(166, 174, 188);
+  --secondary: #7c909a;
+  --accent: #0291d5;
+  --highlight: #dbae5a;
+  --outline: #23282e;
 }
 
 html {
@@ -12,177 +12,181 @@ html {
 }
 
 * {
-    font-family: monospace;
-    background-color: var(--base);
-    color: var(--neutral);
+  font-family: monospace;
+  background-color: var(--base);
+  color: var(--neutral);
 }
 
 body {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 p {
-    margin: 1.8rem 0;
-    text-align: justify;
-    text-justify: inter-word;
+  margin: 1.8rem 0;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 h1 {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }
 
 h2 {
-    font-size: 1.4rem;
-    color: var(--accent);
+  font-size: 1.4rem;
+  color: var(--accent);
 }
 
 a {
-    color: var(--accent);
-    text-decoration: none;
-    opacity: 0.9;
-    transition: 0.2s;
+  color: var(--accent);
+  text-decoration: none;
+  opacity: 0.9;
+  transition: 0.2s;
 }
 
-a:hover, a:focus {
-    opacity: 1;
-    color: var(--highlight);
+a:hover,
+a:focus {
+  opacity: 1;
+  color: var(--highlight);
 }
 
 hr {
-    border: none;
-    border-top: dotted 0.4rem var(--outline);
-    margin: 2.4rem 0;
+  border: none;
+  border-top: dotted 0.4rem var(--outline);
+  margin: 2.4rem 0;
 }
 
 .content {
-    max-width: 60rem;
-    margin: 0 auto;
-    padding: 2.4rem 5rem;
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2.4rem 5rem;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    background-color: var(--base);
-    margin: 0 0 0.6rem 0;
-    z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: var(--base);
+  margin: 0 0 0.6rem 0;
+  z-index: 99;
 }
 
 .header a {
-    color: var(--neutral);
-    transition: 0.2s;
+  color: var(--neutral);
+  transition: 0.2s;
 }
 
-.header a:hover, .header a:focus {
-    color: var(--accent);
+.header a:hover,
+.header a:focus {
+  color: var(--accent);
 }
 
 .title {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .work {
-    margin-top: -1rem;
+  margin-top: -1rem;
 }
 
 .project-header {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2.4rem;
-    flex-wrap: wrap;
-    position: sticky;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.4rem;
+  flex-wrap: wrap;
+  position: sticky;
 }
 
 .project-title {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .project-detail {
-    color: var(--secondary);
-    font-weight: normal;
-    font-style: italic;
-    font-size: 1.2rem;
+  color: var(--secondary);
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .project-description {
-    margin: 0.8rem 0;
+  margin: 0.8rem 0;
 }
 
 .link {
-    display: flex;
-    margin: 1.4rem 0;
-    flex-wrap: wrap;
-    position: sticky;
+  display: flex;
+  margin: 1.4rem 0;
+  flex-wrap: wrap;
+  position: sticky;
 }
 
 .link a {
-    color: var(--accent);
-    transition: 0.2s;
+  color: var(--accent);
+  transition: 0.2s;
 }
 
 .link a:hover {
-    color: var(--highlight)
+  color: var(--highlight);
 }
 
 .footer {
-    font-style: italic;
-    display: flex;
-    justify-content: space-between;
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
 }
 
 .copyright {
-    color: var(--secondary)
+  color: var(--secondary);
 }
 
-.about, .work, .contact {
-    scroll-margin-top: 5.2rem;
+.about,
+.work,
+.contact {
+  scroll-margin-top: 5.2rem;
 }
 
 .links-content {
-    text-align: center;
-    align-content: center;
+  text-align: center;
+  align-content: center;
 }
 
 .links-container {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .links-header {
-    margin-top: 2.4rem;
+  margin-top: 2.4rem;
 }
 
 .links-title {
-    color: var(--accent);
-    font-size: 1.8rem;
+  color: var(--accent);
+  font-size: 1.8rem;
 }
 
 .links-content p {
-    text-align: center;
+  text-align: center;
 }
 
 .button {
-    background-color: var(--base);
-    border: 0.2rem solid var(--accent);
-    border-radius: 1.2rem;
-    padding: 1.2rem 4.8rem;
-    width: 32%;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition-duration: 0.4s;
-    margin: 0.8rem 0;
+  background-color: var(--base);
+  border: 0.2rem solid var(--accent);
+  border-radius: 1.2rem;
+  padding: 1.2rem 4.8rem;
+  width: 32%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition-duration: 0.4s;
+  margin: 0.8rem 0;
 }
 
 .button:hover {
-    background-color: var(--accent);
-    color: var(--base);
-    transition-duration: 0.4s;
+  background-color: var(--accent);
+  color: var(--base);
+  transition-duration: 0.4s;
 }
