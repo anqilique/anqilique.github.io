@@ -1,4 +1,14 @@
 import "./App.css";
+import OrbitImages from "../components/OrbitImages.tsx";
+
+const images = [
+  "https://skill-icons-web.vercel.app/skill-icons/icons/Godot-Dark.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/HTML.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/CSS.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/React-Dark.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/TypeScript.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/Java-Dark.svg",
+];
 
 function App() {
   return (
@@ -18,8 +28,26 @@ function App() {
         </div>
 
         <div className="col-span-1 xl:row-span-3">
-          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div>
+          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
+            <div className="w-full max-h-fit min-h-0 rounded-lg flex justify-center hover:rotate-10 transition-transform duration-300 ease-out">
+              <OrbitImages
+                images={images}
+                shape="ellipse"
+                radiusX={260}
+                radiusY={360}
+                rotation={-86}
+                duration={30}
+                itemSize={200}
+                responsive={true}
+                radius={360}
+                direction="reverse"
+                fill
+                showPath={false}
+                paused={false}
+              />
+            </div>
+
+            <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Skills and Tools</p>
               <p>
                 Lately, I've been interested in game and web development, with a
@@ -54,7 +82,7 @@ function App() {
           </div>
         </div>
 
-        <div className="xl:col-span-1 xl:row-span-2">
+        <div className="xl:col-span-1 xl:row-span-2 md:col-span-2">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <div className="space-y-2">
               <p className="text-xl font-semibold mb-2">Contact Me</p>
