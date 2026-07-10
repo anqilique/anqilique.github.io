@@ -2,7 +2,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="mx-5 my-20 xl:mx-40 md:mx-20">
+    <div className="mx-2 my-20 sm:mx-5 md:mx-20 xl:mx-40">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
