@@ -20,15 +20,15 @@ function App() {
             <img
               src="https://avatars.githubusercontent.com/u/107088774?v=4"
               alt="Avatar"
-              className="size-32 rounded-full mx-auto my-auto hover:rotate-10 transition-transform duration-600 ease-out"
+              className="size-32 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
             />
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
               <p>
                 I'm a university student majoring in Computer Science, and an
-                enjoyer of code, cats, and coffee. Welcome to my corner of the
-                Internet.
+                enjoyer of code, cats, and coffee.
               </p>
+              <p className="mt-1"> Welcome to my corner of the Internet.</p>
             </div>
           </div>
         </div>
