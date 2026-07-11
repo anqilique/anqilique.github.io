@@ -8,6 +8,7 @@ const images = [
   "https://skill-icons-web.vercel.app/skill-icons/icons/React-Dark.svg",
   "https://skill-icons-web.vercel.app/skill-icons/icons/TypeScript.svg",
   "https://skill-icons-web.vercel.app/skill-icons/icons/Java-Dark.svg",
+  "https://skill-icons-web.vercel.app/skill-icons/icons/Python-Dark.svg",
 ];
 
 function App() {
@@ -15,8 +16,13 @@ function App() {
     <div className="mx-2 my-20 sm:mx-5 md:mx-20 xl:mx-40 2xl:mx-80 h-screen">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div>
+          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
+            <img
+              src="https://avatars.githubusercontent.com/u/107088774?v=4"
+              alt="Avatar"
+              className="size-32 rounded-full mx-auto my-auto hover:rotate-10 transition-transform duration-600 ease-out"
+            />
+            <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
               <p>
                 I'm a university student majoring in Computer Science, and an
@@ -33,13 +39,13 @@ function App() {
               <OrbitImages
                 images={images}
                 shape="ellipse"
-                radiusX={260}
-                radiusY={360}
+                radiusX={220}
+                radiusY={380}
                 rotation={-86}
                 duration={30}
                 itemSize={200}
                 responsive={true}
-                radius={360}
+                radius={240}
                 direction="reverse"
                 fill
                 showPath={false}
@@ -59,7 +65,7 @@ function App() {
 
         <div className="col-span-1 xl:row-span-4">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div>
+            <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Photography</p>
               <p>Occasionally, I take pictures of interesting things.</p>
             </div>
@@ -84,7 +90,7 @@ function App() {
 
         <div className="xl:col-span-1 xl:row-span-2 md:col-span-2">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div className="space-y-2">
+            <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Contact Me</p>
               <p>I exist on these platforms also.</p>
             </div>
