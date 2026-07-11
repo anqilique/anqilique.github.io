@@ -88,11 +88,46 @@ function App() {
           </div>
         </div>
 
-        <div className="xl:col-span-1 xl:row-span-2 md:col-span-2">
-          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div className="mt-auto">
-              <p className="text-xl font-semibold mb-2">Contact Me</p>
-              <p>I exist on these platforms also.</p>
+        <div className="xl:col-span-1 xl:row-span-2">
+          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer">
+            <p className="text-xl font-semibold text-center">Contact Me</p>
+
+            <div className="flex justify-center">
+              <div className="flex flex-row gap-4">
+                <a href="https://github.com/anqilique" target="_blank">
+                  <img
+                    src="https://skill-icons-web.vercel.app/skill-icons/icons/Github-Dark.svg"
+                    alt="GitHub"
+                    className="size-12 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                  />
+                </a>
+
+                <a href="https://www.instagram.com/anqilique/" target="_blank">
+                  <img
+                    src="https://skill-icons-web.vercel.app/skill-icons/icons/Instagram.svg"
+                    alt="Instagram"
+                    className="size-12 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                  />
+                </a>
+                <div
+                  className="lg:tooltip lg:tooltip-bottom tooltip-info"
+                  data-tip="angelbhulot@gmail.com"
+                >
+                  <a href="mailto:angelbhulot@gmail.com">
+                    <img
+                      src="https://skill-icons-web.vercel.app/skill-icons/icons/Gmail-Dark.svg"
+                      alt="Gmail"
+                      className="size-12 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center flex-col">
+              <button className="btn btn-soft btn-info btn-block text-lg transition-all duration-440 ease-in-out">
+                See More
+              </button>
             </div>
           </div>
         </div>
