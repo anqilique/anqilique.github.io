@@ -13,9 +13,10 @@ const images = [
 
 function App() {
   return (
-    <div className="mx-2 my-20 sm:mx-5 md:mx-20 xl:mx-40 2xl:mx-80 h-screen">
+    <div className="mx-2 mb-5 sm:mx-5 md:mx-20 xl:mx-40 2xl:mx-80 h-screen">
+      <h1 className="text-2xl text-center my-5">anqilique's desktop</h1>
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
-        <div className="col-span-1 xl:row-span-3">
+        <div className="col-span-1 xl:row-span-3 md:min-h-60">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
             <img
               src="https://avatars.githubusercontent.com/u/107088774?v=4"
@@ -28,12 +29,11 @@ function App() {
                 I'm a university student majoring in Computer Science, and an
                 enjoyer of code, cats, and coffee.
               </p>
-              <p className="mt-1"> Welcome to my corner of the Internet.</p>
             </div>
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-3">
+        <div className="col-span-1 xl:row-span-3 md:min-h-60">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
             <div className="w-full max-h-fit min-h-0 rounded-lg flex justify-center hover:rotate-10 transition-transform duration-300 ease-out">
               <OrbitImages
@@ -63,7 +63,7 @@ function App() {
           </div>
         </div>
 
-        <div className="col-span-1 xl:row-span-4">
+        <div className="col-span-1 xl:row-span-4 md:min-h-80">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Photography</p>
@@ -132,6 +132,9 @@ function App() {
           </div>
         </div>
       </div>
+      <h1 className="text-sm text-center my-5 pb-2">
+        &copy; {new Date().getFullYear()} anqilique
+      </h1>
     </div>
   );
 }
