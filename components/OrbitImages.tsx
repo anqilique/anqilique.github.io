@@ -330,7 +330,7 @@ export default function OrbitImages({
       ? width
       : "100%";
   const containerHeight = responsive
-    ? "auto"
+    ? "100%"
     : typeof height === "number"
       ? height
       : typeof width === "number"
@@ -350,17 +350,19 @@ export default function OrbitImages({
   return (
     <div
       ref={containerRef}
-      className={`relative mx-auto ${className}`}
+      className={`relative mx-auto overflow-hidden w-full max-w-full max-h-full ${className}`}
       style={{
         width: containerWidth,
         height: containerHeight,
         aspectRatio: responsive ? "1 / 1" : undefined,
+        maxWidth: "100%",
+        maxHeight: "100%",
       }}
       aria-hidden="true"
     >
       <div
         className={
-          responsive ? "absolute left-1/2 top-1/2" : "relative w-full h-full"
+          responsive ? "absolute left-1/2 top-1/2 overflow-hidden" : "relative w-full h-full overflow-hidden"
         }
         style={{
           width: responsive ? baseWidth : "100%",
