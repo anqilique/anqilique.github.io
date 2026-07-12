@@ -21,7 +21,7 @@ function App() {
             <img
               src="https://avatars.githubusercontent.com/u/107088774?v=4"
               alt="Avatar"
-              className="size-32 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
+              className="size-32 2xl:size-64 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
             />
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
@@ -98,7 +98,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Github-Dark.svg"
                     alt="GitHub"
-                    className="size-12 2xl:size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
 
@@ -106,7 +106,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Instagram.svg"
                     alt="Instagram"
-                    className="size-12 2xl:size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
                 <div
@@ -117,7 +117,7 @@ function App() {
                     <img
                       src="https://skill-icons-web.vercel.app/skill-icons/icons/Gmail-Dark.svg"
                       alt="Gmail"
-                      className="size-12 2xl:size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                      className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                     />
                   </a>
                 </div>
@@ -130,7 +130,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Github-Dark.svg"
                     alt="GitHub"
-                    className="size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
 
@@ -138,7 +138,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Instagram.svg"
                     alt="Instagram"
-                    className="size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
                 <div
@@ -149,14 +149,14 @@ function App() {
                     <img
                       src="https://skill-icons-web.vercel.app/skill-icons/icons/Gmail-Dark.svg"
                       alt="Gmail"
-                      className="size-16 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                      className="size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                     />
                   </a>
                 </div>
               </div>
             </div>
 
-            <div className="flex justify-center flex-col mt-auto">
+            <div className="flex justify-center flex-col 2xl:mt-auto">
               <button className="btn btn-soft btn-info btn-block text-lg transition-all duration-440 ease-in-out">
                 See More
               </button>
