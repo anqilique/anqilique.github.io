@@ -31,7 +31,13 @@ function App() {
             />
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
-              <p>Welcome to my corner of the Internet. Click to explore! ✨</p>
+              <p>
+                Welcome to my corner of the Internet.{" "}
+                <span className="px-1 font-bold text-white bg-linear-to-r rounded-sm from-accent to-success">
+                  Click cards to explore!
+                </span>{" "}
+                ✨
+              </p>
             </div>
           </div>
         </div>
@@ -147,22 +153,19 @@ function App() {
                           </a>
                         </h2>
                         <div className="badge badge-dash badge-warning text-sm mt-1">
-                          WIP
+                          Work In Progress
                         </div>
                       </div>
-                      <h2 className="text-info text-xl italic">
+                      <h2 className="text-info text-xl italic hidden sm:flex">
                         website, 2026
                       </h2>
                     </div>
-                    <p className="my-1 text-justify">
+                    <p className="my-1 text-justify hidden sm:flex">
                       A membership registration and event management website
                       created by the University of Auckland Web Development and
                       Consulting Club (WDCC) for the University of Auckland Kiwi
                       Asian Club (KAC). Working as a software developer in a
                       team of 10, with a focus on frontend development tasks.
-                      <span className="text-warning px-1">
-                        This is an ongoing project!
-                      </span>
                     </p>
                   </div>
                   <div>
@@ -184,11 +187,11 @@ function App() {
                           Notes App
                         </a>
                       </h2>
-                      <h2 className="text-info text-xl italic">
+                      <h2 className="text-info text-xl italic hidden sm:flex">
                         full-stack app, 2026
                       </h2>
                     </div>
-                    <p className="my-1 text-justify">
+                    <p className="my-1 text-justify hidden sm:flex">
                       A full-stack notes app built using the MERN stack
                       (MongoDB, Express, React, Node). Notes contain a basic
                       title and content section, and the app includes basic
@@ -216,11 +219,11 @@ function App() {
                           crowd
                         </a>
                       </h2>
-                      <h2 className="text-info text-xl italic">
+                      <h2 className="text-info text-xl italic hidden sm:flex">
                         2D mini-game, 2026
                       </h2>
                     </div>
-                    <p className="my-1 text-justify">
+                    <p className="my-1 text-justify hidden sm:flex">
                       Be a tiny person in the crowd, match colours and score
                       points in this mouse-only mini-game. Created using the
                       Godot Game Engine with the aim of achieving quality over
@@ -246,11 +249,11 @@ function App() {
                           Unnamed Cats Game
                         </a>
                       </h2>
-                      <h2 className="text-info text-xl italic">
-                        2-player co-op game, 2025
+                      <h2 className="text-info text-xl italic hidden sm:flex">
+                        2-player game, 2025
                       </h2>
                     </div>
-                    <p className="my-1 text-justify">
+                    <p className="my-1 text-justify hidden sm:flex">
                       Submission for UoA GDG Jam 2, 2025, under the theme: "Pass
                       the Torch". A 2-player co-op game, play as two cats with
                       different roles and find the key to escape as fast as
