@@ -16,8 +16,10 @@ function App() {
   const modalRef = useRef<HTMLDialogElement | null>(null);
 
   return (
-    <div className="mx-2 mb-5 sm:mx-5 md:mx-20 xl:mx-30 h-180 md:h-200">
+    <div className="mx-2 mb-5 sm:mx-5 md:mx-20 xl:mx-30 h-180 2xl:h-200">
       <h1 className="text-2xl text-center my-5">anqilique's desktop</h1>
+
+      {/* ABOUT CARD */}
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3 min-h-80">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
@@ -36,6 +38,7 @@ function App() {
           </div>
         </div>
 
+        {/* SKILLS CARD */}
         <div className="col-span-1 xl:row-span-3 min-h-80">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
             <div className="w-full max-h-fit min-h-0 rounded-lg flex justify-center hover:rotate-10 transition-transform duration-300 ease-out">
@@ -66,6 +69,7 @@ function App() {
           </div>
         </div>
 
+        {/* PHOTOS CARD */}
         <div className="col-span-1 xl:row-span-4 min-h-80">
           <div className="bg-[url('src/assets/ramen.jpeg')] bg-center w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer">
             <div className="mt-auto">
@@ -75,6 +79,7 @@ function App() {
           </div>
         </div>
 
+        {/* WORK CARD */}
         <div className="xl:col-span-2 xl:row-span-3 perspective-[1000px]">
           <div className="md:bg-[url('src/assets/game.png')] bg-center bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-1deg)_rotateY(-1deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer">
             <div className="w-full flex-1 min-h-0 overflow-hidden rounded-lg flex justify-center md:hidden">
@@ -91,10 +96,12 @@ function App() {
           </div>
         </div>
 
+        {/* CONTACT CARD */}
         <div className="xl:col-span-1 xl:row-span-2">
           <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105">
             <p className="text-xl font-semibold text-center">Contact Me</p>
 
+            {/* main icons */}
             <div className="flex justify-center">
               <div className="flex flex-row gap-4">
                 <a href="https://github.com/anqilique" target="_blank">
@@ -134,6 +141,8 @@ function App() {
               >
                 See More
               </button>
+
+              {/* other platforms modal */}
               <dialog
                 ref={modalRef}
                 id="contacts_modal"
