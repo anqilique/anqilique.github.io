@@ -1,4 +1,5 @@
 import "./App.css";
+import { useRef } from "react";
 import OrbitImages from "../components/OrbitImages.tsx";
 
 const images = [
@@ -12,6 +13,8 @@ const images = [
 ];
 
 function App() {
+  const modalRef = useRef<HTMLDialogElement | null>(null);
+
   return (
     <div className="mx-2 mb-5 sm:mx-5 md:mx-20 xl:mx-30 h-180 md:h-200">
       <h1 className="text-2xl text-center my-5">anqilique's desktop</h1>
@@ -125,9 +128,59 @@ function App() {
             </div>
 
             <div className="flex justify-center flex-col 2xl:mt-auto">
-              <button className="btn btn-soft btn-info btn-block text-lg transition-all duration-440 ease-in-out">
+              <button
+                className="btn btn-soft btn-info btn-block text-lg transition-all duration-440 ease-in-out"
+                onClick={() => modalRef.current?.showModal()}
+              >
                 See More
               </button>
+              <dialog
+                ref={modalRef}
+                id="contacts_modal"
+                className="modal modal-bottom sm:modal-middle"
+              >
+                <div className="modal-box sm:w-10/12 max-w-5xl">
+                  <h2 className="font-bold text-xl">Platforms</h2>
+                  <br />
+
+                  <div className="flex flex-col gap-6">
+                    <a
+                      href="https://www.codingame.com/profile/fd1e2576f7372ec6a889887a916abb9b3415326"
+                      target="_blank"
+                    >
+                      <button className="btn btn-warning btn-dash btn-block btn-lg xl:btn-xl">
+                        CodinGame Profile
+                      </button>
+                    </a>
+                    <a href="https://anqilique.itch.io/" target="_blank">
+                      <button className="btn btn-error btn-dash btn-block btn-lg xl:btn-xl">
+                        Itch.io Page
+                      </button>
+                    </a>
+                    <a
+                      href="https://www.focumon.com/focus_with/anqilique"
+                      target="_blank"
+                    >
+                      <button className="btn btn-success btn-dash btn-block btn-lg xl:btn-xl">
+                        Focumon
+                      </button>
+                    </a>
+                    <a href="https://discord.com/" target="_blank">
+                      <button className="btn btn-info btn-dash btn-block btn-lg xl:btn-xl">
+                        Discord (@anqilique)
+                      </button>
+                    </a>
+                  </div>
+
+                  <p className="pt-4 mt-auto">
+                    Press <kbd className="kbd kbd-md">ESC</kbd> or click outside
+                    to close.
+                  </p>
+                </div>
+                <form method="dialog" className="modal-backdrop">
+                  <button>Close Contacts</button>
+                </form>
+              </dialog>
             </div>
           </div>
         </div>
