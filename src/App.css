@@ -42,4 +42,5 @@
 
 html {
   background-color: var(--color-base-200);
+  scroll-behavior: smooth;
 }

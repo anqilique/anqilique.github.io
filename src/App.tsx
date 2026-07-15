@@ -13,8 +13,9 @@ const images = [
 ];
 
 function App() {
-  const contactModalRef = useRef<HTMLDialogElement | null>(null);
+  const aboutModalRef = useRef<HTMLDialogElement | null>(null);
   const workModalRef = useRef<HTMLDialogElement | null>(null);
+  const contactModalRef = useRef<HTMLDialogElement | null>(null);
 
   return (
     <div className="mx-2 mb-5 sm:mx-5 md:mx-20 xl:mx-30 h-180 2xl:h-200">
@@ -23,7 +24,10 @@ function App() {
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         {/* ABOUT CARD */}
         <div className="col-span-1 xl:row-span-3 min-h-80">
-          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
+          <div
+            className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer"
+            onClick={() => aboutModalRef.current?.showModal()}
+          >
             <img
               src="https://avatars.githubusercontent.com/u/107088774?v=4"
               alt="Avatar"
@@ -39,6 +43,103 @@ function App() {
                 ✨
               </p>
             </div>
+            {/* about modal */}
+            <dialog
+              ref={aboutModalRef}
+              id="about_modal"
+              className="modal modal-bottom sm:modal-middle"
+            >
+              <div className="modal-box sm:w-8/12 max-w-5xl outline-none">
+                <div className="flex flex-col gap-4 md:mx-10">
+                  <h2 className="font-bold text-xl">About Me</h2>
+                  <div className="flex flex-col gap-4 lg:gap-2 text-lg">
+                    <div className="flex flex-row">
+                      <p>👋 Hi, I'm Angel!</p>
+                      <p className="pl-1">I am a </p>
+                      <span className="text-rotate">
+                        <span>
+                          <span className="pl-1 text-lg text-error">
+                            student. 👩‍🎓
+                          </span>
+                          <span className="pl-1 text-lg text-primary">
+                            developer. 👩‍💻
+                          </span>
+                          <span className="pl-1 text-lg text-warning">
+                            cat person. 🐈
+                          </span>
+                          <span className="pl-1 text-lg text-info">
+                            gamer. 🎮
+                          </span>
+                          <span className="pl-1 text-lg text-success">
+                            tutor. 👩‍🏫
+                          </span>
+                          <span className="pl-1 text-lg text-info">
+                            logistician (ISTJ). 📋
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                    <p className="text-justify">
+                      I like using technology to build creative and colourful
+                      things, such as this website. I've always treated my
+                      personal website as something fun. The goal is to show my
+                      current progress with web development in a way that isn't
+                      dull or too "resume-like". Hence all the colours!
+                    </p>
+                    <div className="flex flex-row">
+                      <p>I also enjoy</p>
+                      <span className="text-rotate">
+                        <span>
+                          <span className="pl-1 text-lg text-primary">
+                            game development. 🎮
+                          </span>
+                          <span className="pl-1 text-lg text-warning">
+                            pixel art. 🎨
+                          </span>
+                          <span className="pl-1 text-lg text-success">
+                            photography. 📷
+                          </span>
+                        </span>
+                      </span>
+                    </div>
+                    <h2 className="font-bold text-xl mt-4">
+                      About the Website
+                    </h2>
+                    <p className="text-justify">
+                      I designed and created this website over one week using{" "}
+                      <span className="text-info">Penpot</span> (a Figma
+                      alternative) and my chosen editor of{" "}
+                      <span className="text-primary">VSCode</span>. This website
+                      was built with <span className="text-info">React</span>{" "}
+                      and <span className="text-primary">TypeScript</span>,
+                      using the Tailwind CSS plugin,{" "}
+                      <span className="text-warning">daisyUI</span>.
+                    </p>
+                    <p className="text-justify">
+                      Additionally, the orbit images (see the Skills card) is a
+                      free component created by Dominik Koch, which you can find
+                      and modify for your own projects on{" "}
+                      <a
+                        href="https://reactbits.dev/animations/orbit-images"
+                        target="_blank"
+                        className="link link-hover text-purple-400"
+                      >
+                        React Bits
+                      </a>
+                      .
+                    </p>
+                  </div>
+
+                  <p className="pt-4 mt-auto text-info">
+                    Press <kbd className="kbd kbd-md text-info">ESC</kbd> or
+                    click outside to close.
+                  </p>
+                </div>
+              </div>
+              <form method="dialog" className="modal-backdrop backdrop-blur-xs">
+                <button>Close Modal</button>
+              </form>
+            </dialog>
           </div>
         </div>
 
@@ -98,7 +199,7 @@ function App() {
             </div>
             <div className="mt-auto brightness-110">
               <p className="text-xl font-semibold mb-2">My Work</p>
-              <p className="">See what I've been up to?</p>
+              <p>See what I've been up to?</p>
             </div>
 
             {/* work modal */}
@@ -255,10 +356,11 @@ function App() {
                     </div>
                     <p className="my-1 text-justify hidden sm:flex">
                       Submission for UoA GDG Jam 2, 2025, under the theme: "Pass
-                      the Torch". A 2-player co-op game, play as two cats with
-                      different roles and find the key to escape as fast as
-                      possible. Pass the torch between each other and stay
-                      alive! Built using the Godot Game Engine.
+                      the Torch". Finalist in The Student's Slice category of
+                      The Pavs: NZ Game Awards 2026. A 2-player co-op game, play
+                      as two cats with different roles and find the key to
+                      escape as fast as possible. Pass the torch between each
+                      other and stay alive! Built using the Godot Game Engine.
                     </p>
                   </div>
                   <p className="pt-4 mt-auto text-info">
