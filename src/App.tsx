@@ -14,6 +14,7 @@ const images = [
 
 function App() {
   const aboutModalRef = useRef<HTMLDialogElement | null>(null);
+  const skillsModalRef = useRef<HTMLDialogElement | null>(null);
   const workModalRef = useRef<HTMLDialogElement | null>(null);
   const contactModalRef = useRef<HTMLDialogElement | null>(null);
 
@@ -53,7 +54,7 @@ function App() {
                 <div className="flex flex-col gap-4 md:mx-10">
                   <h2 className="font-bold text-xl">About Me</h2>
                   <div className="flex flex-col gap-4 lg:gap-2 text-lg">
-                    <div className="flex flex-row">
+                    <div className="flex flex-row flex-wrap">
                       <p>👋 Hi, I'm Angel!</p>
                       <p className="pl-1">I am a </p>
                       <span className="text-rotate">
@@ -86,7 +87,7 @@ function App() {
                       current progress with web development in a way that isn't
                       dull or too "resume-like". Hence all the colours!
                     </p>
-                    <div className="flex flex-row">
+                    <div className="flex flex-row flex-wrap">
                       <p>I also enjoy</p>
                       <span className="text-rotate">
                         <span>
@@ -145,7 +146,10 @@ function App() {
 
         {/* SKILLS CARD */}
         <div className="col-span-1 xl:row-span-3 min-h-80">
-          <div className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer">
+          <div
+            className="bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:cursor-pointer"
+            onClick={() => skillsModalRef.current?.showModal()}
+          >
             <div className="w-full max-h-fit min-h-0 rounded-lg flex justify-center hover:rotate-10 transition-transform duration-300 ease-out">
               <OrbitImages
                 images={images}
@@ -171,6 +175,126 @@ function App() {
                 focus on learning React.
               </p>
             </div>
+
+            {/* skills modal */}
+            <dialog
+              ref={skillsModalRef}
+              id="skills_modal"
+              className="modal modal-bottom sm:modal-middle"
+            >
+              <div className="modal-box sm:w-8/12 max-w-5xl outline-none">
+                <div className="flex flex-col gap-4 md:mx-10">
+                  <h2 className="font-bold text-xl">Skills</h2>
+
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">Python</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-sm">
+                        Certified with Honors (CodinGame)
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                        Academic Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Programming Language
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">Java</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-sm">
+                        Certified (CodinGame)
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                        Academic Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Programming Language
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">Godot</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                        Project Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                        Academic Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Game Engine
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">HTML/CSS</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                        Project Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                        Academic Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Fundamentals
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">Git/GitHub</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                        Project Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                        Academic Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Version Control
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">React</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-warning text-sm">
+                        Learning
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                        Project Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        JavaScript Library
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-lg">TypeScript</h3>
+                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                      <div className="badge badge-soft lg:badge-soft badge-warning text-sm">
+                        Learning
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                        Project Experience
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                        Programming Language
+                      </div>
+                    </div>
+                  </div>
+                  <p className="pt-4 mt-auto text-info">
+                    Press <kbd className="kbd kbd-md text-info">ESC</kbd> or
+                    click outside to close.
+                  </p>
+                </div>
+              </div>
+              <form method="dialog" className="modal-backdrop backdrop-blur-xs">
+                <button>Close Modal</button>
+              </form>
+            </dialog>
           </div>
         </div>
 
@@ -242,7 +366,7 @@ function App() {
                       </div>
                       <div className="diff-resizer"></div>
                     </figure>
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                       <div className="flex flex-row justify-between gap-2">
                         <h2>
                           <a
@@ -253,7 +377,7 @@ function App() {
                             Kiwi Asian Club
                           </a>
                         </h2>
-                        <div className="badge badge-dash badge-warning text-sm mt-1">
+                        <div className="badge badge-soft lg:badge-soft badge-warning text-sm mt-1">
                           Work In Progress
                         </div>
                       </div>
@@ -278,7 +402,7 @@ function App() {
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
                     </div>
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                       <h2>
                         <a
                           href="https://github.com/anqilique/Notes-App"
@@ -310,7 +434,7 @@ function App() {
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
                     </div>
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                       <h2>
                         <a
                           href="https://anqilique.itch.io/crowd"
@@ -340,7 +464,7 @@ function App() {
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
                     </div>
-                    <div className="flex flex-row justify-between">
+                    <div className="flex flex-row flex-wrap justify-between">
                       <h2>
                         <a
                           href="https://anqilique.itch.io/unnamed-cats-game"
