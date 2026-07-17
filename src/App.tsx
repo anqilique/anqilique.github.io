@@ -36,13 +36,13 @@ function App() {
             />
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
-              <p>
-                Welcome to my corner of the Internet.{" "}
+              <div className="flex flex-row flex-wrap gap-1">
+                <p>Welcome to my corner of the Internet. </p>
                 <span className="px-1 font-bold text-white bg-linear-to-r rounded-sm from-accent to-success">
                   Click cards to explore!
                 </span>{" "}
                 ✨
-              </p>
+              </div>
             </div>
             {/* about modal */}
             <dialog
@@ -54,27 +54,21 @@ function App() {
                 <div className="flex flex-col gap-4 md:mx-10">
                   <h2 className="font-bold text-xl">About Me</h2>
                   <div className="flex flex-col gap-4 lg:gap-2 text-lg">
-                    <div className="flex flex-row flex-wrap">
+                    <div className="flex flex-row flex-wrap py-2 text-xl">
                       <p>👋 Hi, I'm Angel!</p>
                       <p className="pl-1">I am a </p>
                       <span className="text-rotate">
                         <span>
-                          <span className="pl-1 text-lg text-error">
-                            student. 👩‍🎓
-                          </span>
-                          <span className="pl-1 text-lg text-primary">
+                          <span className="pl-1 text-error">student. 👩‍🎓</span>
+                          <span className="pl-1 text-primary">
                             developer. 👩‍💻
                           </span>
-                          <span className="pl-1 text-lg text-warning">
+                          <span className="pl-1 text-warning">
                             cat person. 🐈
                           </span>
-                          <span className="pl-1 text-lg text-info">
-                            gamer. 🎮
-                          </span>
-                          <span className="pl-1 text-lg text-success">
-                            tutor. 👩‍🏫
-                          </span>
-                          <span className="pl-1 text-lg text-info">
+                          <span className="pl-1 text-info">gamer. 🎮</span>
+                          <span className="pl-1 text-success">tutor. 👩‍🏫</span>
+                          <span className="pl-1 text-info">
                             logistician (ISTJ). 📋
                           </span>
                         </span>
@@ -91,13 +85,13 @@ function App() {
                       <p>I also enjoy</p>
                       <span className="text-rotate">
                         <span>
-                          <span className="pl-1 text-lg text-primary">
+                          <span className="pl-1 text-primary">
                             game development. 🎮
                           </span>
-                          <span className="pl-1 text-lg text-warning">
+                          <span className="pl-1 text-warning">
                             pixel art. 🎨
                           </span>
-                          <span className="pl-1 text-lg text-success">
+                          <span className="pl-1 text-success">
                             photography. 📷
                           </span>
                         </span>
@@ -107,7 +101,7 @@ function App() {
                       About the Website
                     </h2>
                     <p className="text-justify">
-                      I designed and created this website over one week using{" "}
+                      I designed and created this website using{" "}
                       <span className="text-info">Penpot</span> (a Figma
                       alternative) and my chosen editor of{" "}
                       <span className="text-primary">VSCode</span>. This website
@@ -189,13 +183,16 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Python</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-success text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-md">
                         Certified with Honors (CodinGame)
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-md">
+                        Certified Basics (HackerRank)
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-md">
                         Academic Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Programming Language
                       </div>
                     </div>
@@ -204,13 +201,16 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Java</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-success text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-md">
                         Certified (CodinGame)
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-success text-md">
+                        Certified Basics (HackerRank)
+                      </div>
+                      <div className="badge badge-soft lg:badge-soft badge-error text-md">
                         Academic Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Programming Language
                       </div>
                     </div>
@@ -218,13 +218,13 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Godot</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-error text-md">
                         Academic Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Game Engine
                       </div>
                     </div>
@@ -232,13 +232,13 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">HTML/CSS</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-error text-md">
                         Academic Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Fundamentals
                       </div>
                     </div>
@@ -246,13 +246,13 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Git/GitHub</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-error text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-error text-md">
                         Academic Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Version Control
                       </div>
                     </div>
@@ -260,13 +260,13 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">React</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-warning text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-warning text-md">
                         Learning
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         JavaScript Library
                       </div>
                     </div>
@@ -274,13 +274,13 @@ function App() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">TypeScript</h3>
                     <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
-                      <div className="badge badge-soft lg:badge-soft badge-warning text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-warning text-md">
                         Learning
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-primary text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
-                      <div className="badge badge-soft lg:badge-soft badge-info text-sm">
+                      <div className="badge badge-soft lg:badge-soft badge-info text-md">
                         Programming Language
                       </div>
                     </div>
