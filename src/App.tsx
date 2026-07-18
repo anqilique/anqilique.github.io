@@ -15,6 +15,7 @@ const images = [
 function App() {
   const aboutModalRef = useRef<HTMLDialogElement | null>(null);
   const skillsModalRef = useRef<HTMLDialogElement | null>(null);
+  const photosModalRef = useRef<HTMLDialogElement | null>(null);
   const workModalRef = useRef<HTMLDialogElement | null>(null);
   const contactModalRef = useRef<HTMLDialogElement | null>(null);
 
@@ -30,7 +31,7 @@ function App() {
             onClick={() => aboutModalRef.current?.showModal()}
           >
             <img
-              src="https://avatars.githubusercontent.com/u/107088774?v=4"
+              src="src/assets/02.webp"
               alt="Avatar"
               className="size-32 2xl:size-48 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
             />
@@ -300,11 +301,83 @@ function App() {
 
         {/* PHOTOS CARD */}
         <div className="col-span-1 xl:row-span-4 min-h-80">
-          <div className="bg-[url('src/assets/ramen.jpeg')] bg-center w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer">
+          <div
+            className="bg-[url('src/assets/13.webp')] bg-center w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
+            onClick={() => photosModalRef.current?.showModal()}
+          >
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Photography</p>
               <p>Occasionally, I take pictures of interesting things.</p>
             </div>
+
+            {/* other platforms modal */}
+            <dialog
+              ref={photosModalRef}
+              id="photos_modal"
+              className="modal modal-bottom sm:modal-middle"
+            >
+              <div className="modal-box sm:w-8/12 max-w-5xl outline-none">
+                <div className="flex flex-col gap-4 md:mx-10">
+                  <h2 className="font-bold text-xl">Photography</h2>
+
+                  <p className="text-lg">
+                    Here are some photos I've taken over the years. Scroll over
+                    the images to browse.
+                  </p>
+
+                  <div className="flex flex-row flex-wrap gap-6">
+                    <div className="carousel carousel-vertical bg-neutral px-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/01.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/02.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/03.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/04.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/05.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/06.webp" />
+                      </div>
+                    </div>
+                    <div className="carousel carousel-vertical bg-neutral p-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/07.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/08.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/09.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/10.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/11.webp" />
+                      </div>
+                      <div className="carousel-item h-full">
+                        <img src="src/assets/12.webp" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="pt-4 mt-auto text-info">
+                    Press <kbd className="kbd kbd-md text-info">ESC</kbd> or
+                    click outside to close.
+                  </p>
+                </div>
+              </div>
+              <form method="dialog" className="modal-backdrop backdrop-blur-xs">
+                <button>Close Modal</button>
+              </form>
+            </dialog>
           </div>
         </div>
 
