@@ -4,7 +4,6 @@ import OrbitImages from "../components/OrbitImages.tsx";
 
 // Import all image assets
 import avatar from "./assets/02.webp";
-import game from "./assets/game.png";
 import workGrid from "./assets/work-grid.png";
 import cats from "./assets/cats.png";
 import kacHome from "./assets/kac-home.png";
@@ -22,7 +21,6 @@ import img09 from "./assets/09.webp";
 import img10 from "./assets/10.webp";
 import img11 from "./assets/11.webp";
 import img12 from "./assets/12.webp";
-import img13 from "./assets/13.webp";
 
 const images = [
   "https://skill-icons-web.vercel.app/skill-icons/icons/Godot-Dark.svg",
@@ -324,7 +322,7 @@ function App() {
         {/* PHOTOS CARD */}
         <div className="col-span-1 xl:row-span-4 min-h-80">
           <div
-            className="bg-[url('src/assets/13.webp')] bg-center w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
+            className="bg-photos-card bg-center w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-4deg)_rotateY(-4deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
             onClick={() => photosModalRef.current?.showModal()}
           >
             <div className="mt-auto">
@@ -406,7 +404,7 @@ function App() {
         {/* WORK CARD */}
         <div className="xl:col-span-2 xl:row-span-3 perspective-[1000px]">
           <div
-            className="md:bg-[url('src/assets/game.png')] bg-center bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-1deg)_rotateY(-1deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
+            className="md:bg-game-card bg-center bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-1deg)_rotateY(-1deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
             onClick={() => workModalRef.current?.showModal()}
           >
             <div className="w-full flex-1 min-h-0 overflow-hidden rounded-lg flex justify-center md:hidden">

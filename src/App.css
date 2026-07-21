@@ -44,3 +44,11 @@ html {
   background-color: var(--color-base-200);
   scroll-behavior: smooth;
 }
+
+.bg-photos-card {
+  background-image: url("src/assets/13.webp");
+}
+
+.bg-game-card {
+  background-image: url("src/assets/game.png");
+}
