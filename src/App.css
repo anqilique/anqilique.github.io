@@ -46,9 +46,9 @@ html {
 }
 
 .bg-photos-card {
-  background-image: url("src/assets/13.webp");
+  background-image: url('./assets/13.webp');
 }
 
 .bg-game-card {
-  background-image: url("src/assets/game.png");
+  background-image: url('./assets/game.png');
 }
