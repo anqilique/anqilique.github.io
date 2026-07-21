@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "anqidark";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: #0b1f22;
+  --color-base-200: #010c11;
+  --color-base-300: #040e11;
+  --color-base-content: #b3a488;
+  --color-primary: #2a97ca;
+  --color-primary-content: oklch(14.399% 0.024 62.756);
+  --color-secondary: oklch(34.465% 0.029 199.194);
+  --color-secondary-content: oklch(86.893% 0.005 199.194);
+  --color-accent: #00598e;
+  --color-accent-content: #d0dbe0;
+  --color-neutral: oklch(20.4% 0.033 199);
+  --color-neutral-content: oklch(83.3% 0.074 110.4);
+  --color-info: oklch(70.1% 0.128 196.8);
+  --color-info-content: oklch(15.898% 0.012 184.558);
+  --color-success: oklch(74.7% 0.179 131.116);
+  --color-success-content: oklch(14.944% 0.014 131.116);
+  --color-warning: oklch(88.2% 0.201 87.722);
+  --color-warning-content: oklch(17.63% 0.028 87.722);
+  --color-error: oklch(74.5% 0.201 31.871);
+  --color-error-content: oklch(15.463% 0.025 31.871);
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+html {
+  background-color: var(--color-base-200);
+  scroll-behavior: smooth;
+}

@@ -1,19 +1,34 @@
-# [anqilique.github.io](https://anqilique.github.io/)
-_Clean and simple personal website._
+# React + TypeScript + Vite
 
-- Contains an about, work, and contact/links section.
-- Switches to a linktree-style page when detecting a smaller screen size.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-### Built With...
-[![Basics](https://skillicons.dev/icons?i=html,css,javascript&theme=dark&perline=15)](https://skillicons.dev)
+Currently, two official plugins are available:
 
-### Future Work
-- [ ] Actual responsive design
-- [ ] Ability to toggle/select different themes
-- [ ] A nicer title and icon to display in the tab
-- [ ] Scroll progress bar (just because it's fancy)
-- [ ] Random flavour text (because fun)
-- [ ] Some kind of gamification (✨)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Website Preview
-<img width="1903" height="926" alt="image" src="media/personal_website.png" />
+## React Compiler
+
+The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+
+Note: This will impact Vite dev & build performances.
+
+## Expanding the Oxlint configuration
+
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
+
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
