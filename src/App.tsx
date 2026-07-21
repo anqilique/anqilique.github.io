@@ -80,7 +80,7 @@ function App() {
                       things, such as this website. I've always treated my
                       personal website as something fun. The goal is to show my
                       current progress with web development in a way that isn't
-                      dull or too "resume-like". Hence all the colours!
+                      dull or too "resume-like".
                     </p>
                     <div className="flex flex-row flex-wrap">
                       <p>I also enjoy</p>
@@ -415,6 +415,7 @@ function App() {
                     <a
                       href="https://github.com/anqilique"
                       className="link link-hover text-info"
+                      target="_blank"
                     >
                       GitHub
                     </a>
