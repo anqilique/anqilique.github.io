@@ -2,6 +2,28 @@ import "./App.css";
 import { useRef } from "react";
 import OrbitImages from "../components/OrbitImages.tsx";
 
+// Import all image assets
+import avatar from "./assets/02.webp";
+import game from "./assets/game.png";
+import workGrid from "./assets/work-grid.png";
+import cats from "./assets/cats.png";
+import kacHome from "./assets/kac-home.png";
+import kacOld from "./assets/kac-old.png";
+import crowd from "./assets/crowd.png";
+import notes from "./assets/notes-app.png";
+import img01 from "./assets/01.webp";
+import img03 from "./assets/03.webp";
+import img04 from "./assets/04.webp";
+import img05 from "./assets/05.webp";
+import img06 from "./assets/06.webp";
+import img07 from "./assets/07.webp";
+import img08 from "./assets/08.webp";
+import img09 from "./assets/09.webp";
+import img10 from "./assets/10.webp";
+import img11 from "./assets/11.webp";
+import img12 from "./assets/12.webp";
+import img13 from "./assets/13.webp";
+
 const images = [
   "https://skill-icons-web.vercel.app/skill-icons/icons/Godot-Dark.svg",
   "https://skill-icons-web.vercel.app/skill-icons/icons/HTML.svg",
@@ -31,7 +53,7 @@ function App() {
             onClick={() => aboutModalRef.current?.showModal()}
           >
             <img
-              src="src/assets/02.webp"
+              src={avatar}
               alt="Avatar"
               className="size-32 2xl:size-48 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
             />
@@ -328,42 +350,42 @@ function App() {
                   <div className="flex flex-row flex-wrap gap-6">
                     <div className="carousel carousel-vertical bg-neutral px-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
                       <div className="carousel-item h-full">
-                        <img src="src/assets/01.webp" />
+                        <img src={img01} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/02.webp" />
+                        <img src={avatar} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/03.webp" />
+                        <img src={img03} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/04.webp" />
+                        <img src={img04} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/05.webp" />
+                        <img src={img05} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/06.webp" />
+                        <img src={img06} />
                       </div>
                     </div>
                     <div className="carousel carousel-vertical bg-neutral p-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
                       <div className="carousel-item h-full">
-                        <img src="src/assets/07.webp" />
+                        <img src={img07} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/08.webp" />
+                        <img src={img08} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/09.webp" />
+                        <img src={img09} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/10.webp" />
+                        <img src={img10} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/11.webp" />
+                        <img src={img11} />
                       </div>
                       <div className="carousel-item h-full">
-                        <img src="src/assets/12.webp" />
+                        <img src={img12} />
                       </div>
                     </div>
                   </div>
@@ -389,7 +411,7 @@ function App() {
           >
             <div className="w-full flex-1 min-h-0 overflow-hidden rounded-lg flex justify-center md:hidden">
               <img
-                src="src/assets/work-grid.png"
+                src={workGrid}
                 alt="My Work"
                 className="h-full object-contain rounded-lg"
               />
@@ -427,16 +449,10 @@ function App() {
                     {/* kac */}
                     <figure className="diff aspect-video my-4 justify-center rounded-xl hover:scale-101 transition duration-200 ease-in-out">
                       <div className="diff-item-1" role="img">
-                        <img
-                          alt="Old KAC homepage"
-                          src="src/assets/kac-old.png"
-                        />
+                        <img alt="Old KAC homepage" src={kacOld} />
                       </div>
                       <div className="diff-item-2" role="img">
-                        <img
-                          alt="New KAC homepage"
-                          src="src/assets/kac-home.png"
-                        />
+                        <img alt="New KAC homepage" src={kacHome} />
                       </div>
                       <div className="diff-resizer"></div>
                     </figure>
@@ -471,7 +487,7 @@ function App() {
                     {/* notes */}
                     <div className="flex justify-center my-4">
                       <img
-                        src="src/assets/notes-app.png"
+                        src={notes}
                         alt="Notes App"
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
@@ -503,7 +519,7 @@ function App() {
                     {/* crowd */}
                     <div className="flex justify-center my-4">
                       <img
-                        src="src/assets/crowd.png"
+                        src={crowd}
                         alt="crowd Game"
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
@@ -533,7 +549,7 @@ function App() {
                     {/* cats */}
                     <div className="flex justify-center my-4">
                       <img
-                        src="src/assets/cats.png"
+                        src={cats}
                         alt="Unnamed Cats Game"
                         className="h-auto object-contain rounded-xl hover:scale-101 transition duration-200 ease-in-out"
                       />
