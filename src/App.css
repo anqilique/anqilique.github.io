@@ -45,10 +45,13 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Background image classes for responsive usage */
 .bg-photos-card {
   background-image: url('./assets/13.webp');
 }
 
-.bg-game-card {
-  background-image: url('./assets/game.png');
+@media (min-width: 768px) {
+  .bg-game-card {
+    background-image: url('./assets/game.png');
+  }
 }

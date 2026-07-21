@@ -404,7 +404,7 @@ function App() {
         {/* WORK CARD */}
         <div className="xl:col-span-2 xl:row-span-3 perspective-[1000px]">
           <div
-            className="md:bg-game-card bg-center bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-1deg)_rotateY(-1deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
+            className="bg-game-card bg-center bg-base-100 w-full h-full border-none rounded-lg sm:p-7 p-4 flex flex-col gap-5 transition-transform duration-300 ease-out hover:transform-[rotateX(-1deg)_rotateY(-1deg)_rotateZ(-1deg)_scale(1.02)] hover:brightness-105 hover:cursor-pointer"
             onClick={() => workModalRef.current?.showModal()}
           >
             <div className="w-full flex-1 min-h-0 overflow-hidden rounded-lg flex justify-center md:hidden">
