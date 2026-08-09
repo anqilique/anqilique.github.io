@@ -53,16 +53,15 @@ function App() {
             <img
               src={avatar}
               alt="Avatar"
-              className="size-32 2xl:size-48 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
+              className="size-42 md:size-32  xl:size-42 2xl:size-42 rounded-full mx-auto my-auto hover:rotate-20 transition-transform duration-800 ease-out"
             />
             <div className="mt-auto">
               <p className="text-xl font-semibold mb-2">Hi, I'm Angel!</p>
-              <div className="flex flex-row flex-wrap gap-1">
+              <div className="flex flex-col flex-wrap gap-2">
                 <p>Welcome to my corner of the Internet. </p>
-                <span className="px-1 font-bold text-white bg-linear-to-r rounded-sm from-accent to-success">
-                  Click cards to explore!
-                </span>{" "}
-                ✨
+                <span className="px-1 font-bold text-white bg-linear-to-r w-fit rounded-sm from-accent to-success">
+                  Click cards to explore! ✨
+                </span>
               </div>
             </div>
             {/* about modal */}
@@ -203,7 +202,7 @@ function App() {
 
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Python</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-success text-md">
                         Certified with Honors (CodinGame)
                       </div>
@@ -221,7 +220,7 @@ function App() {
 
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Java</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-success text-md">
                         Certified (CodinGame)
                       </div>
@@ -238,7 +237,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Godot</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
@@ -252,7 +251,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">HTML/CSS</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
@@ -266,7 +265,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">Git/GitHub</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-primary text-md">
                         Project Experience
                       </div>
@@ -280,7 +279,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">React</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-warning text-md">
                         Learning
                       </div>
@@ -294,7 +293,7 @@ function App() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <h3 className="text-lg">TypeScript</h3>
-                    <div className="flex flex-row flex-wrap gap-4 lg:gap-2">
+                    <div className="flex flex-col sm:flex-row flex-wrap gap-4 lg:gap-2">
                       <div className="badge badge-soft lg:badge-soft badge-warning text-md">
                         Learning
                       </div>
@@ -346,7 +345,7 @@ function App() {
                   </p>
 
                   <div className="flex flex-row flex-wrap gap-6">
-                    <div className="carousel carousel-vertical bg-neutral px-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
+                    <div className="carousel carousel-vertical bg-neutral px-4 size-80 2xl:size-105 rounded-xl">
                       <div className="carousel-item h-full">
                         <img src={img01} />
                       </div>
@@ -366,7 +365,7 @@ function App() {
                         <img src={img06} />
                       </div>
                     </div>
-                    <div className="carousel carousel-vertical bg-neutral p-4 size-100 lg:size-80 xl:size-90 2xl:size-105 rounded-xl">
+                    <div className="carousel carousel-vertical bg-neutral p-4 size-80 2xl:size-105 rounded-xl">
                       <div className="carousel-item h-full">
                         <img src={img07} />
                       </div>
