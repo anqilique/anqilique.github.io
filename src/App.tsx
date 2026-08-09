@@ -599,7 +599,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Github-Dark.svg"
                     alt="GitHub"
-                    className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-16 2xl:size-18 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
 
@@ -607,7 +607,7 @@ function App() {
                   <img
                     src="https://skill-icons-web.vercel.app/skill-icons/icons/Instagram.svg"
                     alt="Instagram"
-                    className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                    className="size-16 2xl:size-18 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                   />
                 </a>
                 <div
@@ -618,7 +618,7 @@ function App() {
                     <img
                       src="https://skill-icons-web.vercel.app/skill-icons/icons/Gmail-Dark.svg"
                       alt="Gmail"
-                      className="size-16 2xl:size-14 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
+                      className="size-16 2xl:size-18 transition-transform duration-300 ease-out hover:scale-110 hover:rotate-[-10deg]"
                     />
                   </a>
                 </div>
